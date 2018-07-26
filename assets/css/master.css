@@ -3,6 +3,26 @@
 
 :root {
     --red: #9b111e;
+    --font-family-serif: 'Playfair Display', serif;
+    --font-family-sans-serif: 'PT Sans', sans-serif;
+}
+
+body {
+    font-family: var(--font-family-serif);
+    font-size: 12px; 
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-family-sans-serif);
+}
+
+h2 {
+    font-size: 24px;
 }
 
 .text-center {
@@ -20,4 +40,3 @@
 .project-image {
     width: 100%;
 }
-
