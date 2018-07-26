@@ -1,0 +1,24 @@
+div.social-flex-footer ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+div.social-flex-footer ul > li {
+    border-right: 1px solid var(--red);
+    width: calc(100%/3);
+    padding: 3% 0;
+    border: 1px solid var(--red);
+    text-align: center;
+}
+
+div.social-flex-footer ul > li:first-child {
+    border-right: none;
+}
+
+div.social-flex-footer ul > li:last-child {
+    border-left: none;
+}
+

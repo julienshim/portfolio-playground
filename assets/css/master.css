@@ -1,0 +1,23 @@
+@import url("./reset.css");
+@import url("./footer.css");
+
+:root {
+    --red: #9b111e;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.m-auto {
+    margin: 0 auto;
+}
+
+.p-3 {
+    padding: 0 3%;
+}
+
+.project-image {
+    width: 100%;
+}
+
