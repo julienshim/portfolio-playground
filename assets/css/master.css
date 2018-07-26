@@ -1,13 +1,23 @@
 @import url("./reset.css");
+@import url("https://fonts.googleapis.com/css?family=PT+Sans:700|Playfair+Display");
 @import url("./footer.css");
 
 :root {
-    --red: #9b111e;
+    --dust: #afafaf;
+    --charcoal: #333;
+    --shadow: #999;
+    --liquid-white: #fcfcfc;
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
     --font-family-serif: 'Playfair Display', serif;
     --font-family-sans-serif: 'PT Sans', sans-serif;
 }
 
 body {
+    background-color: var(--liquid-white);
     font-family: var(--font-family-serif);
     font-size: 12px; 
 }
@@ -34,9 +44,19 @@ h2 {
 }
 
 .p-3 {
-    padding: 0 3%;
+    padding: 3%;
+}
+
+.hamburger {
+    font-size: 2rem;
 }
 
 .project-image {
     width: 100%;
+}
+
+svg {
+    fill: var(--dust);
+    width: 12px;
+    height: 12px;
 }

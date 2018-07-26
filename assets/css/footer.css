@@ -1,3 +1,11 @@
+footer {
+    color: var(--dust);
+}
+
+.copyright {
+    margin: 1rem 0;
+}
+
 div.social-flex-footer ul {
     display: flex;
     justify-content: space-between;
@@ -7,10 +15,10 @@ div.social-flex-footer ul {
 }
 
 div.social-flex-footer ul > li {
-    border-right: 1px solid var(--red);
+    border-right: 1px solid var(--dust);
     width: calc(100%/3);
     padding: 3% 0;
-    border: 1px solid var(--red);
+    border: 1px solid var(--dust);
     text-align: center;
 }
 
