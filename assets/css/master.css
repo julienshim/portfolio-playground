@@ -3,7 +3,7 @@
 @import url('./nav.css');
 @import url('./sidebar.css');
 @import url('./social.css');
-@import url('.portfolio.css');
+@import url('./portfolio.css');
 @import url('./footer.css');
 
 :root {
@@ -53,6 +53,10 @@ h2 {
     text-align: center;
 }
 
+.text-left {
+    text-align: left;
+}
+
 .m-auto {
     margin: 0 auto;
 }
@@ -73,8 +77,23 @@ h2 {
     margin-top: 48px;
 }
 
+.mt-96 {
+    margin-top: 96px;
+}
+
 .mt-192 {
     margin-top: 192px;
+}
+
+.mv-6 {
+    margin: 6px 0;
+}
+.mv-48 {
+    margin: 48px 0;
+}
+
+.mv-48 {
+    margin: 48px 0;
 }
 
 .p-3 {
@@ -89,13 +108,7 @@ h2 {
     padding: 3% 0;
 }
 
-.mv-24 {
-    margin: 24px 0;
-}
 
-.mv-48 {
-    margin: 48px 0;
-}
 
 
 
