@@ -9,6 +9,7 @@
 :root {
     --dust: rgba(163,165,167,1.0); /*#a3a5a7*/
     --charcoal: rgba(28,33,39,1.0); /*#1C2127*/
+    --charcoal-70: rgba(28,33,39,0.7); /*#1C2127*/
     --liquid-white: rgba(248,249,251,1.0); /*F8F9FB*/
     --teal: rgba(22,177,181,1.0); /*#16B1B5*/
     --teal-70: rgba(22,177,181,0.7); /*#16B1B5*/
@@ -32,6 +33,12 @@ body.hidden {
 }
 
 /* Fonts */
+
+.main-wrapper {
+    /* position: relative; */
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
 h1,
 h2,
@@ -108,6 +115,8 @@ h2 {
 .pv-3 {
     padding: 3% 0;
 }
+
+
 
 
 
