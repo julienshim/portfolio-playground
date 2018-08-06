@@ -3,6 +3,7 @@
 @import url('./nav.css');
 @import url('./sidebar.css');
 @import url('./social.css');
+@import url('./index.css');
 @import url('./portfolio.css');
 @import url('./footer.css');
 
@@ -68,13 +69,22 @@ h2 {
     margin: 0 auto;
 }
 
-.m-24 {
-    margin: 24px 0;
+.mb-6 {
+    margin: 6px 0;
+}
+
+.mb-12 {
+    margin: 12px 0;
 }
 
 .mb-24 {
     margin-bottom: 24px;
 }
+
+.mb-48 {
+    margin-bottom: 48px;
+}
+
 
 .mr-12 {
     margin-right: 12px;
