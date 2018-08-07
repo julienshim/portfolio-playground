@@ -1,0 +1,56 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+ul.filter {
+    /* background: var(--charcoal); */
+    margin: 24px 0;
+}
+
+a.filter-tags {
+    text-decoration: none;
+    margin-left: 12px;
+    font-size: 1rem;
+}
+
+#Actual {
+    background: silver;
+    color: White;
+    padding: 20px;
+}
+.slideup, .slidedown {
+    max-height: 0;            
+    overflow-y: hidden;
+    -webkit-transition: max-height 0.6s ease-in-out;
+    -moz-transition: max-height 0.6s ease-in-out;
+    -ms-transition: max-height 0.6s ease-in-out;
+    -o-transition: max-height 0.6s ease-in-out;
+    transition: max-height 0.6s ease-in-out;
+    
+}
+.slidedown {            
+    max-height: 500px ;               
+}   
+
+.filter-svg {
+    margin: 0 0 0 24px;
+    fill: var(--dust);
+}
+
+.filter-tab {
+    font-size: 1.6em;
+    color: var(--charcoal-70);
+    /* margin-bottom: 3%; */
+}
+
+/* unvisited link */
+a[href].filter-tags, 
+a[href].filter-tags:visited, 
+a[href].filter-tags:active {
+    color: var(--charcoal-70);
+}
+
+a[href].filter-tags:hover {
+    color: var(--teal);
+}

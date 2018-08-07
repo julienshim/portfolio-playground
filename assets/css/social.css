@@ -1,0 +1,15 @@
+svg {
+    fill: var(--dust);
+    width: 1rem;
+    height: 1rem;
+  }
+  
+svg:hover {
+fill: var(--teal);
+/* transitions */
+-webkit-transition: fill 1.0s ease-in-out;
+-moz-transition: fill 1.0s ease-in-out;
+-ms-transition: fill 1.0s ease-in-out;
+-o-transition: fill 1.0s ease-in-out;
+transition: fill 1.0s ease-in-out;      
+}

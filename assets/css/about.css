@@ -1,0 +1,131 @@
+@import url('./skills.css');
+
+
+div.fourbythree {
+    height: 100vh;
+    background: var(--liquid-white);
+}
+
+div.typed-introduction {
+    max-width: 1200px;
+    position: relative;
+    top: 12%;
+    left: 0%;
+    width: 100;
+}
+
+div.typed-introduction h1 span {
+    color: var(--teal);
+}
+
+div.typed-introduction p {
+    font-size: 1.4rem;
+    color: var(--dust);
+    font-weight: none;
+}
+
+div.about-container, div.skills-container {
+    display: block;
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 50%;
+    flex-basis: 300px;
+}
+
+.sectionHeader {
+    font-size: 1.6em;
+    color: var(--charcoal-70);
+    font-family: var(--font-family-serif);
+}
+
+#intro > a > svg {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 10%;
+}
+
+.caret {
+    border-left: .05em solid var(--charcoal-70);
+    animation: caret 1s steps(1) infinite;
+}
+
+
+.blink {
+    animation: bounce 0.5s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    
+  }
+  
+  @keyframes caret {
+    50% {
+      border-color: transparent;
+    }
+  }
+
+
+  @keyframes bounce {
+    from { transform: translate3d(0, 0, 0);     }
+    to   { transform: translate3d(0, 12px, 0); }
+  }
+
+
+  a[href].message-me {
+    text-align: center;
+    display: block;
+    margin: auto;
+    width: 120px;
+    padding: 6px 24px;
+    font-size: 1rem;
+    text-decoration: none;
+    border-radius: 15px;
+    background-color: var(--teal);
+    color: var(--liquid-white);
+    border: 1px solid transparent;
+    -webkit-transition: all .8s ease;
+    -moz-transition: all .8s ease;
+    -ms-transition: all .8s ease;
+    -o-transition: all .8s ease;
+    transition: all .8s ease;
+  }
+
+  a[href].message-me > svg {
+    fill: var(--liquid-white);
+    -webkit-transition: all .8s ease;
+    -moz-transition: all .8s ease;
+    -ms-transition: all .8s ease;
+    -o-transition: all .8s ease;
+    transition: all .8s ease;
+  }
+
+ a[href].message-me:hover svg {
+    fill: var(--teal);
+  }
+
+  a[href].message-me:visited, 
+  a[href].message-me:active {
+    color: var(--liquid-white);
+  }
+  
+  a[href].message-me:hover {
+      background-color: transparent;
+      border: 1px solid var(--teal);
+      color: var(--teal);
+  }
+
+  .see-all {
+    margin-left: 48px; 
+    font-size: 1rem;
+    color: var(--teal-70);
+    text-decoration: none;
+    -webkit-transition: all .8s ease;
+    -moz-transition: all .8s ease;
+    -ms-transition: all .8s ease;
+    -o-transition: all .8s ease;
+    transition: all .8s ease;
+  }
+
+  .see-all:hover {
+      color: var(--dust);
+  }

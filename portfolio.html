@@ -15,7 +15,7 @@
     <!-- Navigation -->
     
     <nav class="p-3p m-24">
-        <h1 class="logo text-center" id="logo">JM</h1>
+        <a href="./index.html"><h1 class="logo text-center" id="logo">JM</h1></a>
         <!--Hamburger-Visible-->
         <div class="nav-right hamburger-visible">
             <div class="button" id="button">
@@ -40,38 +40,43 @@
     <div class="p-3p mb-24 m-auto">
         <h2 class="text-center mb-24">Selected Works</h2>
         <div class="p-3p container">
-            <h3 id="Trigger">Filter Projects
-                <svg class="filter-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                    <path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z" />
-                </svg>
+
+            <h3 class="trigger">
+                <span id="sliderTrigger">Filter Projects
+                    <svg class="filter-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path id="messageMe" d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z" />
+                    </svg>
+                </span>
+                <span id="currentFilterSelected"></span>
             </h3>
-            <div id="Slider" class="slideup">
+                
+            <div id="slider" class="slideup">
                 <ul class="filter">
                     <!--project filter tags here-->
                 </ul>
             </div>
         </div>
 
-        <div id="portfolio" class="grid-300 m-auto" style="background-color: green">
+        <div id="portfolio" class="grid-300 m-auto mb-48">
             <!--projects here-->
         </div>
             <!--Footer-->
             <footer class="p-3p mb-24 m-auto">
                 <div class="social-flex-footer m-auto">
                     <ul>
-                        <li class="pv-3p text-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <li class="text-center">
+                            <svg class="p-24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                                 <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
                                 />
                             </svg>
                         </li>
-                        <li class="pv-3p text-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <li class="text-center">
+                            <svg class="p-24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                                 <path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"
                                 />
                         </li>
-                        <li class="pv-3p text-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <li class="text-center">
+                            <svg class="p-24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                                 <path d="M24 0l-6 22-8.129-7.239 7.802-8.234-10.458 7.227-7.215-1.754 24-12zm-15 16.668v7.332l3.258-4.431-3.258-2.901z" />
                             </svg>
                         </li>
@@ -97,11 +102,11 @@
                                     </li>
                                     <!-- nth(2)-child -->
                                     <li class="sidebar-item mv-48">
-                                        <a href="./index.html" class="sidebar-anchor pb-6">Portfolio</a>
+                                        <a href="./portfolio.html" class="sidebar-anchor pb-6">Portfolio</a>
                                     </li>
                                    <!-- nth(3)-child -->
                                    <li class="sidebar-item mv-48">
-                                        <a href="#" class="sidebar-anchor pb-6">Résumé</a>
+                                        <a href="./assets/resume/jerauld_resume.pdf" class="sidebar-anchor pb-6">Résumé</a>
                                     </li>
                                     <!-- nth(4)-child-->
                                     <li class="sidebar-item mv-48">
@@ -110,28 +115,28 @@
                                     <!-- last-child / social -->
                                     <div class="sidebar-item mv-48 social-flex-sidebar">
                                         <ul class="mt-96">
-                                            <!-- first-social-child -->
-                                            <li class="sidebar-social-item text-center mr-12">
-                                                <a href="" target="_blank">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                            <!-- first-social-child (github) -->
+                                            <li class="sidebar-social-item text-center mr-24">
+                                                <a href="https://github.com/jerauld" target="_blank">
+                                                    <svg class="p-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                                                         <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
                                                         />
                                                     </svg>
                                                 </a>
                                             </li>
-                                            <!-- nth(2)-social-child -->
-                                            <li class="sidebar-social-item text-center mr-12">
-                                                <a href="" target="_blank">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                            <!-- nth(2)-social-child (linkedin) -->
+                                            <li class="sidebar-social-item text-center mr-24">
+                                                <a href="https://www.linkedin.com/in/jerauld/" target="_blank">
+                                                    <svg class="p-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                                                         <path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"
                                                         />
                                                     </svg>
                                                 </a>
                                             </li>
-                                            <!-- last-social-child -->
+                                            <!-- last-social-child (email) -->
                                             <li class="sidebar-social-item text-center">
                                                 <a href="mailto:jerauldmanansala@gmail.com">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                                    <svg class="p-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                                                         <path d="M24 0l-6 22-8.129-7.239 7.802-8.234-10.458 7.227-7.215-1.754 24-12zm-15 16.668v7.332l3.258-4.431-3.258-2.901z" />
                                                     </svg>
                                                 </a>

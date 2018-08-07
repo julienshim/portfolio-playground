@@ -1,25 +1,19 @@
 footer {
+    max-width: 1200px;
+    margin: 0 3%;
     color: var(--dust);
-}
-
-.copyright {
-    margin: 1rem 0;
+    font-size: 0.83rem;
 }
 
 div.social-flex-footer ul {
     display: flex;
     justify-content: space-between;
     list-style-type: none;
-    margin: 0;
-    padding: 0;
 }
 
 div.social-flex-footer ul > li {
-    border-right: 1px solid var(--dust);
     width: calc(100%/3);
-    padding: 3% 0;
     border: 1px solid var(--dust);
-    text-align: center;
 }
 
 div.social-flex-footer ul > li:first-child {
