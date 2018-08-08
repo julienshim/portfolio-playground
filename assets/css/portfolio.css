@@ -151,25 +151,6 @@ div.text li {
     color: var(--dust);
 }
 
-.filter-id {
-    animation:fadeIn 0.8s ease-out;
-}
-
-.filter-id a {
-    margin-left: 48px;
-    border: 1px solid var(--teal-70);
-    padding: 3px 24px;
-    border-radius: 15px;
-    text-decoration: none;
-    font-size: 1rem;
-    color: var(--teal-70);
-    -webkit-transition: all .8s ease;
-    -moz-transition: all .8s ease;
-    -ms-transition: all .8s ease;
-    -o-transition: all .8s ease;
-    transition: all .8s ease;
-}
-
 
 .trigger, .trigger:hover svg {
     -webkit-transition: all .8s ease;
@@ -187,23 +168,3 @@ div.text li {
     fill: var(--teal);
 }
 
-.filter-id a:hover {
-    border: 1px solid var(--dust);
-    color: var(--dust);
-}
-
-.filter-id a svg {
-    fill: var(--teal-70);
-    width: 12px;
-    height: 12px;
-    margin-right: 12px;
-    -webkit-transition: all .8s ease;
-    -moz-transition: all .8s ease;
-    -ms-transition: all .8s ease;
-    -o-transition: all .8s ease;
-    transition: all .8s ease;
-}
-
-.filter-id a:hover svg {
-    fill: var(--dust);
-}

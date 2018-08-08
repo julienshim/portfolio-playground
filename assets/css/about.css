@@ -42,7 +42,7 @@ div.about-container, div.skills-container {
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 10%;
+    bottom: 5%;
 }
 
 .caret {
@@ -114,9 +114,14 @@ div.about-container, div.skills-container {
       color: var(--teal);
   }
 
-  .see-all {
-    margin-left: 48px; 
-    font-size: 1rem;
+.recent-work-header {
+    margin-bottom: 8px;
+}
+a[href].see-all {
+    border: 1px solid var(--teal-70);
+    padding: 3px 12px;
+    border-radius: 15px;
+    font-size: 0.7rem;
     color: var(--teal-70);
     text-decoration: none;
     -webkit-transition: all .8s ease;
@@ -128,4 +133,5 @@ div.about-container, div.skills-container {
 
   .see-all:hover {
       color: var(--dust);
+      border: 1px solid var(--dust);
   }

@@ -54,3 +54,43 @@ a[href].filter-tags:active {
 a[href].filter-tags:hover {
     color: var(--teal);
 }
+
+
+.filter-id {
+    animation:fadeIn 0.8s ease-out;
+}
+
+.filter-id a {
+    border: 1px solid var(--teal-70);
+    padding: 3px 12px;
+    border-radius: 15px;
+    text-decoration: none;
+    font-size: .7rem;
+    color: var(--teal-70);
+    -webkit-transition: all .8s ease;
+    -moz-transition: all .8s ease;
+    -ms-transition: all .8s ease;
+    -o-transition: all .8s ease;
+    transition: all .8s ease;
+}
+
+.filter-id a:hover {
+    border: 1px solid var(--dust);
+    color: var(--dust);
+}
+
+.filter-id a svg {
+    fill: var(--teal-70);
+    width: 10px;
+    height: 10px;
+    margin-left: 12px;
+    -webkit-transition: all .8s ease;
+    -moz-transition: all .8s ease;
+    -ms-transition: all .8s ease;
+    -o-transition: all .8s ease;
+    transition: all .8s ease;
+}
+
+.filter-id a:hover svg {
+    fill: var(--dust);
+}

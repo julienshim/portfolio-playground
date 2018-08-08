@@ -51,17 +51,21 @@ document.addEventListener("DOMContentLoaded", function () {
                 if(filter === "All") {
                     generateProjects(portfolio.projects);
                     currentFilterSelected.innerHTML = "";
+                    slider.classList.toggle('slideup');
+                    slider.classList.toggle('slidedown');
                 } else {
                     filterProjects(filter);
+                    slider.classList.toggle('slideup');
+                    slider.classList.toggle('slidedown');
                     currentFilterSelected.innerHTML = `
-                    <span class="filter-id" id="filterId"><a href="#"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M12 11.293l10.293-10.293.707.707-10.293 10.293 10.293 10.293-.707.707-10.293-10.293-10.293 10.293-.707-.707 10.293-10.293-10.293-10.293.707-.707 10.293 10.293z"/></svg> ${filter}</a></span>`
+                    <span class="filter-id" id="filterId"><a href="#">${filter} <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M12 11.293l10.293-10.293.707.707-10.293 10.293 10.293 10.293-.707.707-10.293-10.293-10.293 10.293-.707-.707 10.293-10.293-10.293-10.293.707-.707 10.293 10.293z"/></svg></a></span>`
 
                 }
             });
         });
     }
 
-    if(currentFilterSelected.innerHTML.trim() !== " ") {
+    if(currentFilterSelected && (currentFilterSelected.innerHTML.trim() !== " ")) {
         currentFilterSelected.addEventListener('click', function(event){
             event.preventDefault();
             currentFilterSelected.innerHTML = "";

@@ -1,6 +1,6 @@
 var about = {
     name: "Jerauld Manansala",
-    jobTitle: "developer",
+    jobTitle: "full-stack developer",
     image: "",
     location: "San Francisco Bay Area",
     skills: [
@@ -192,7 +192,7 @@ about.init();
 
 // Introduction - Note: Object Literals
 
-var introduction = `<h1 class='mb-12'>Hi, my name is <span>${about.name}</span>.</h1> <h1 class='mb-48'>I am a <span>${about.jobTitle}</span> based in the <span>${about.location}</span>.</h1><p>I love designing and building full-stack web applications.</p>`,
+var introduction = `<h1 class='mb-12'>Hi, my name is <span>${about.name}</span>.</h1> <h1 class='mb-48'>I am a user-focused <span>${about.jobTitle}</span> based in the <span>${about.location}</span>.</h1><p>I love designing and building full-stack web applications.</p>`,
     i = 0,
     isTag,
     text;
