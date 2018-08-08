@@ -64,7 +64,8 @@ var portfolio = {
     ],
     targets: {
         filter: document.querySelector('.filter'),
-        portfolio: document.querySelector('#portfolio')
+        portfolio: document.querySelector('#portfolio'),
+        currentFilterSelected: document.querySelector('#currentFilterSelected')
     },
     sessionStorage: {
         filter: sessionStorage.getItem('filter')
@@ -141,11 +142,15 @@ function init() {
     if(!portfolio.sessionStorage.filter){
         sessionStorage.setItem('filter', "All");
         generateProjects(portfolio.projects);
+        portfolio.targets.currentFilterSelected.innerHTML = "";
     } else if(portfolio.sessionStorage.filter === "All") { 
         sessionStorage.setItem('filter', "All");
         generateProjects(portfolio.projects);
+        portfolio.targets.currentFilterSelected.innerHTML = "";
     } else {
         filterProjects(portfolio.sessionStorage.filter);
+        portfolio.targets.currentFilterSelected.innerHTML = `
+        <span class="filter-id" id="filterId"><a href="#"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M12 11.293l10.293-10.293.707.707-10.293 10.293 10.293 10.293-.707.707-10.293-10.293-10.293 10.293-.707-.707 10.293-10.293-10.293-10.293.707-.707 10.293 10.293z"/></svg> ${portfolio.sessionStorage.filter}</a></span>`;
     };
 };
 
