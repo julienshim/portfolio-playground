@@ -26,7 +26,7 @@ var portfolio = {
             summary: "Job search web application tool.",
             image: "assets/images/projects/jumpstart.png",
             disciplines: ["JavaScript", "EJS", "jQuery", "Bootstrap", "HTML", "CSS", "NodeJS", "Express", "MySQL", "OAuth"],
-            githubRepo: "https://github.com/jerauld/jumpstart",
+            githubRepo: "https://github.com/julienshim/jumpstart",
             deployedURL: "https://obscure-beach-77511.herokuapp.com/",
             roles: ["Database Developer", "Project Manager", "QA Engineer"],
             year: 2018
@@ -46,8 +46,8 @@ var portfolio = {
             summary: "Stormtrooper themed memory game built with React.",
             image: "assets/images/projects/star-wars.png",
             disciplines: ["ReactJS", "CSS", "JavaScript", "JSON"],
-            githubRepo: "https://github.com/jerauld/clicky-game",
-            deployedURL: "https://jerauld.github.io/clicky-game/",
+            githubRepo: "https://github.com/julienshim/clicky-game",
+            deployedURL: "https://julienshim.github.io/clicky-game/",
             roles: ["Author"],
             year: 2018
         },
@@ -56,8 +56,8 @@ var portfolio = {
             summary: "Legend of Zelda themed 'Crystals Collector'-type game dynamically updated via jQuery.",
             image: "assets/images/projects/zelda.png",
             disciplines: ["HTML", "CSS", "JavaScript", "jQuery"],
-            githubRepo: "https://github.com/jerauld/unit-4-game",
-            deployedURL: "https://jerauld.github.io/unit-4-game/",
+            githubRepo: "https://github.com/julienshim/unit-4-game",
+            deployedURL: "https://julienshim.github.io/unit-4-game/",
             roles: ["Author"],
             year: 2018
         }

@@ -1,5 +1,5 @@
 var about = {
-    name: "Jerauld Manansala",
+    name: "Julien Shim",
     jobTitle: "full-stack developer",
     location: "San Francisco Bay Area",
     skills: [
@@ -120,7 +120,7 @@ var about = {
             summary: "Job search web application tool.",
             image: "assets/images/projects/jumpstart.png",
             disciplines: ["JavaScript", "EJS", "jQuery", "Bootstrap", "HTML", "CSS", "NodeJS", "Express", "MySQL", "OAuth"],
-            githubRepo: "https://github.com/jerauld/jumpstart",
+            githubRepo: "https://github.com/julienshim/jumpstart",
             deployedURL: "https://obscure-beach-77511.herokuapp.com/",
             roles: ["Database Developer", "Project Manager", "QA Engineer"],
             year: 2018
