@@ -49,7 +49,7 @@ li {
 }
 
 h1 {
-    font-size: 2rem;
+    font-size: 1.89rem;
     font-weight: bold;
 }
 
@@ -79,6 +79,10 @@ h3 {
 .absolute-m-auto {
     margin-left: auto;
     margin-right: auto;
+}
+
+.mb-12 {
+    margin-bottom: 12px;
 }
 
 .mb-12p {

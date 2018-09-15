@@ -6,7 +6,7 @@ var portfolio = {
             image: "assets/images/projects/odins-ravens.png",
             disciplines: ["ReactJS", "Firebase", "JavaScript", "CSS", "Bootstrap", "jQuery", "OAuth"],
             githubRepo: "https://github.com/Laethaka/OdinsWorld",
-            deployedURL: "https://evening-coast-38386.herokuapp.com/",
+            deployedURL: "https://odins-ravens.herokuapp.com/",
             roles: ["Front-End Engineer", "QA Engineer"],
             year: 2018
     
@@ -46,8 +46,8 @@ var portfolio = {
             summary: "Stormtrooper themed memory game built with React.",
             image: "assets/images/projects/star-wars.png",
             disciplines: ["ReactJS", "CSS", "JavaScript", "JSON"],
-            githubRepo: "https://github.com/jerauld/unit-4-game",
-            deployedURL: "https://jerauld.github.io/unit-4-game/",
+            githubRepo: "https://github.com/jerauld/clicky-game",
+            deployedURL: "https://jerauld.github.io/clicky-game/",
             roles: ["Author"],
             year: 2018
         },
@@ -91,7 +91,7 @@ function generateProjects(filteredProjects) {
                                 <p>${project.year}</p>
                             </div>
                             <div class="external-links-overlay">
-                                <p><a href="${project.deployedURL}" target="_blank">Github</a> <a href="${project.deployedURL}" target="_blank">Live</a></p>
+                                <p><a href="${project.githubRepo}" target="_blank">Github</a> <a href="${project.deployedURL}" target="_blank">Live</a></p>
                             </div>
                         </div>
                     </div>

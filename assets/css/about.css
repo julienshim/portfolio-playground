@@ -135,3 +135,15 @@ a[href].see-all {
       color: var(--dust);
       border: 1px solid var(--dust);
   }
+
+  .introduction-header {
+      line-height: 2.4rem;
+  }
+
+  .about-paragraph {
+      font-size: 1rem;
+  }
+
+  .profile-picture {
+    width: 100%;
+  }

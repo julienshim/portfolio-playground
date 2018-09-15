@@ -1,7 +1,6 @@
 var about = {
     name: "Jerauld Manansala",
     jobTitle: "full-stack developer",
-    image: "",
     location: "San Francisco Bay Area",
     skills: [
         {
@@ -101,7 +100,7 @@ var about = {
             image: "assets/images/projects/odins-ravens.png",
             disciplines: ["ReactJS", "Firebase", "JavaScript", "CSS", "Bootstrap", "jQuery", "OAuth"],
             githubRepo: "https://github.com/Laethaka/OdinsWorld",
-            deployedURL: "https://evening-coast-38386.herokuapp.com/",
+            deployedURL: "https://odins-ravens.herokuapp.com/",
             roles: ["Front End Engineer", "QA Engineer"],
             year: 2018
     
@@ -158,13 +157,13 @@ var about = {
                                 <p>${works.year}</p>
                              </div>
                             <div class="external-links-overlay">
-                                <p><a href="${works.deployedURL}" target="_blank">Github</a> <a href="${works.deployedURL}" target="_blank">Live</a></p>
+                                <p><a href="${works.githubRepo}" target="_blank">Github</a> <a href="${works.deployedURL}" target="_blank">Live</a></p>
                             </div>
                         </div>
                     </div>
                     <p class="project-title">${works.title}</p>
                     <p class="disciplines">${works.roles.join(', ')}</p>
-                    <p class="summary">${works.summary}</p>
+                    <p class="summary mb-12">${works.summary}</p>
                 </div>
             </div>
         `).join('')}
@@ -192,7 +191,7 @@ about.init();
 
 // Introduction - Note: Object Literals
 
-var introduction = `<h1 class='mb-12'>Hi, my name is <span>${about.name}</span>.</h1> <h1 class='mb-48'>I am a user-focused <span>${about.jobTitle}</span> based in the <span>${about.location}</span>.</h1><p>I love designing and building full-stack web applications.</p>`,
+var introduction = `<h1 class='introduction-header mb-12'>Hi, my name is <span>${about.name}</span>.</h1> <h1 class='introduction-header mb-48'>I am a user-focused <span>${about.jobTitle}</span> based in the <span>${about.location}</span>.</h1><p>I love designing and building full-stack web applications.</p>`,
     i = 0,
     isTag,
     text;
