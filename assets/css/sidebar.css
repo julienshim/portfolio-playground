@@ -142,7 +142,7 @@ div.social-flex-sidebar ul {
 }
 
 div.social-flex-sidebar ul > li {
-  width: calc(100%/3);
+  width: calc(100%/4);
 }
 
 div.social-flex-sidebar ul > li:first-child {
@@ -165,14 +165,23 @@ div.social-flex-sidebar ul > li:last-child {
   
 .sidebar-social-item:first-child {
   /* transitions */
-  -webkit-transition: all 1.2s .8s ease-in-out;
-  -moz-transition: all 1.2s .8s ease-in-out;
-  -ms-transition: all 1.2s .8s ease-in-out;
-  -o-transition: all 1.2s .8s ease-in-out;
-  transition: all 1.2s .8s ease-in-out;
+  -webkit-transition: all 1.2s 0.6s ease-in-out;
+  -moz-transition: all 1.2s 0.6s ease-in-out;
+  -ms-transition: all 1.2s 0.6s ease-in-out;
+  -o-transition: all 1.2s 0.6s ease-in-out;
+  transition: all 1.2s 0.6s ease-in-out;
 }
   
 .sidebar-social-item:nth-child(2) {
+  /* transitions */
+  -webkit-transition: all 1.2s 0.8s ease-in-out;
+  -moz-transition: all 1.2s 0.8s ease-in-out;
+  -ms-transition: all 1.2s 0.8s ease-in-out;
+  -o-transition: all 1.2s 0.8s ease-in-out;
+  transition: all 1.2s 0.8s ease-in-out;
+}
+
+.sidebar-social-item:nth-child(3) {
   /* transitions */
   -webkit-transition: all 1.2s 1.0s ease-in-out;
   -moz-transition: all 1.2s 1.0s ease-in-out;

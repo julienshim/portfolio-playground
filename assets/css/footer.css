@@ -12,11 +12,15 @@ div.social-flex-footer ul {
 }
 
 div.social-flex-footer ul > li {
-    width: calc(100%/3);
+    width: calc(100%/4);
     border: 1px solid var(--dust);
 }
 
 div.social-flex-footer ul > li:first-child {
+    border-right: none;
+}
+
+div.social-flex-footer ul > li:nth-child(2) {
     border-right: none;
 }
 
