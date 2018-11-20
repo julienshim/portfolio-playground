@@ -11,7 +11,6 @@ div.project-container {
   width: 100%;
   height: 100%;
   animation: fadeIn 0.8s ease-out;
-  cursor: pointer;
 }
 
 @keyframes fadeIn {
