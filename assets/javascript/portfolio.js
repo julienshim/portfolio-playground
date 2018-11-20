@@ -156,7 +156,7 @@ function generateProjects(filteredProjects) {
         ${filteredProjects
           .map(
             project => `
-            <div class="project-container">
+            <div class="project-container" onclick="void(0)">
                 <div class="project-content mb-12p">
                     <div class="project-image-container">
                         <img src="${
