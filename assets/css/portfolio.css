@@ -1,4 +1,4 @@
-@import url('./filter.css');
+@import url("./filter.css");
 
 /* .portfolio {
     max-width: 1200px;
@@ -7,164 +7,159 @@
 } */
 
 div.project-container {
-    display: block;
-    width: 100%;
-    height: 100%;
-    animation:fadeIn 0.8s ease-out;
+  display: block;
+  width: 100%;
+  height: 100%;
+  animation: fadeIn 0.8s ease-out;
+  cursor: pointer;
 }
-  
+
 @keyframes fadeIn {
-0% {
-    opacity:0
-}
-100% {
-    opacity:1;
-}
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .project-content {
-    margin: 0 6px 0 6px;
+  margin: 0 6px 0 6px;
 }
 
 .project-image-container {
-    overflow: hidden;
-    position: relative;
-    width: 100%;
-
+  overflow: hidden;
+  position: relative;
+  width: 100%;
 }
 
 .project-image {
-    display: block;
-    width: 100%;
-    -webkit-transition: transform 0.8s ease;
-    -moz-transition: transform 0.8s ease;
-    -o-transition: transform 0.8s ease;
-    -ms-transition: transform 0.8s ease;
-    transition: transform 0.8s ease;
-
+  display: block;
+  width: 100%;
+  -webkit-transition: transform 0.8s ease;
+  -moz-transition: transform 0.8s ease;
+  -o-transition: transform 0.8s ease;
+  -ms-transition: transform 0.8s ease;
+  transition: transform 0.8s ease;
 }
 
 .overlay {
-    background: var(--charcoal-70);
-    position: absolute;
-    opacity: 0;
-    top: 0%;
-    right: 0%;
-    height: 100%;
-    width: 100%;
-    text-align: center;
-    -webkit-transition: opacity 0.8s ease;
-    -moz-transition: opacity 0.8s ease;
-    -o-transition: opacity 0.8s ease;
-    -ms-transition: opacity 0.8s ease;
-    transition: opacity 0.8s ease;
+  background: var(--charcoal-70);
+  position: absolute;
+  opacity: 0;
+  top: 0%;
+  right: 0%;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  -webkit-transition: opacity 0.8s ease;
+  -moz-transition: opacity 0.8s ease;
+  -o-transition: opacity 0.8s ease;
+  -ms-transition: opacity 0.8s ease;
+  transition: opacity 0.8s ease;
 }
 
-
 .project-container:hover .project-image {
-    -webkit-transform: scale(1.2); 
-    -moz-transform: scale(1.2);
-    -o-transform: scale(1.2);
-    -ms-transform: scale (1.2);
-    transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  -ms-transform: scale (1.2);
+  transform: scale(1.2);
 }
 
 .project-container:hover .overlay {
-    opacity: 1.0;  
+  opacity: 1;
 }
 
 .external-links-overlay {
-    position: absolute;
-    bottom: 9%;
-    right: 6%;
-    color: var(--liquid-white);
-    /* margin: 0 12px 12px 0; */
+  position: absolute;
+  bottom: 9%;
+  right: 6%;
+  color: var(--liquid-white);
+  /* margin: 0 12px 12px 0; */
 }
 
 .external-links-overlay p a {
-    border-radius: 15px; 
-    padding: 6px 12px; 
-    background-color: var(--teal);
-    color: var(--liquid-white);
-    text-decoration: none;
-    border: 1px solid transparent;
-    -webkit-transition: all .8s ease;
-    -moz-transition: all .8s ease;
-    -ms-transition: all .8s ease;
-    -o-transition: all .8s ease;
-    transition: all .8s ease;
+  border-radius: 15px;
+  padding: 6px 12px;
+  background-color: var(--teal);
+  color: var(--liquid-white);
+  text-decoration: none;
+  border: 1px solid transparent;
+  -webkit-transition: all 0.8s ease;
+  -moz-transition: all 0.8s ease;
+  -ms-transition: all 0.8s ease;
+  -o-transition: all 0.8s ease;
+  transition: all 0.8s ease;
 }
 
 .external-links-overlay p a:hover {
-    background-color: transparent;
-    color: var(--teal-70);
-    border: 1px solid var(--teal-70);
-    text-decoration: none;
+  background-color: transparent;
+  color: var(--teal-70);
+  border: 1px solid var(--teal-70);
+  text-decoration: none;
 }
 
 .year-overlay {
-    position: absolute;
-    bottom: 7%;
-    left: 6%;
-    /* margin: 0 0 12px 12px; */
-    padding: 0 6px;
-    border-bottom: 1px solid var(--dust);
-    color: var(--dust);
-    font-size: 1rem;
-    font-weight: bold;
+  position: absolute;
+  bottom: 7%;
+  left: 6%;
+  /* margin: 0 0 12px 12px; */
+  padding: 0 6px;
+  border-bottom: 1px solid var(--dust);
+  color: var(--dust);
+  font-size: 1rem;
+  font-weight: bold;
 }
 
 div.text {
-    display: flex;
-    flex-flow: row-reverse wrap;
-    justify-content: space-around;
-    
+  display: flex;
+  flex-flow: row-reverse wrap;
+  justify-content: space-around;
 }
 
 div.text ul {
-    margin-top: 12px;
-    max-width: 94%;
+  margin-top: 12px;
+  max-width: 94%;
 }
 
-
 div.text li {
-    color: var(--dust);
-    display: inline-block;
-    border: 1px solid var(--dust);
-    font-size: 0.7rem;
-    padding: 4px 16px;
-    margin: 4px;
-    border-top-left-radius: 50px;
-    border-top-right-radius: 50px;
-    border-bottom-right-radius: 50px;
-    border-bottom-left-radius: 50px;
-    font-family: var(--font-family-sans-serif);
-  }
+  color: var(--dust);
+  display: inline-block;
+  border: 1px solid var(--dust);
+  font-size: 0.7rem;
+  padding: 4px 16px;
+  margin: 4px;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+  font-family: var(--font-family-sans-serif);
+}
 
 .project-title {
-    font-weight: bold;
-    font-size: 1rem;
-    margin-top: 2%;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-top: 2%;
 }
 
 .disciplines {
-    color: var(--dust);
+  color: var(--dust);
 }
 
-
-.trigger, .trigger:hover svg {
-    -webkit-transition: all .8s ease;
-    -moz-transition: all .8s ease;
-    -ms-transition: all .8s ease;
-    -o-transition: all .8s ease;
-    transition: all .8s ease;
+.trigger,
+.trigger:hover svg {
+  -webkit-transition: all 0.8s ease;
+  -moz-transition: all 0.8s ease;
+  -ms-transition: all 0.8s ease;
+  -o-transition: all 0.8s ease;
+  transition: all 0.8s ease;
 }
 
 .trigger:hover {
-    color: var(--teal);
+  color: var(--teal);
 }
 
 .trigger:hover svg {
-    fill: var(--teal);
+  fill: var(--teal);
 }
-
