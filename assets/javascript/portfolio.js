@@ -1,6 +1,19 @@
 var portfolio = {
   projects: [
     {
+      title: "Swift Calculator",
+      summary:
+        "A macOS calculator app clone for iOS (iPhone).",
+      image: "assets/images/projects/swift-calculator.png",
+      disciplines: [
+        "Swift"
+      ],
+      githubRepo: "https://github.com/julienshim/Swift-Calculator-App",
+      deployedURL: "",
+      roles: ["Author"],
+      year: 2019
+    },
+    {
       title: "Odin's Ravens",
       summary:
         "Web application clone of the strategic card game Odin's Ravens.",
@@ -178,9 +191,9 @@ function generateProjects(filteredProjects) {
                             <div class="external-links-overlay">
                                 <p><a href="${
                                   project.githubRepo
-                                }" target="_blank">Github</a> <a href="${
-              project.deployedURL
-            }" target="_blank">Live</a></p>
+                                }" target="_blank">Github</a>${project.deployedURL && ` <a href="${
+                                  project.deployedURL
+                                }" target="_blank">Live</a>`}</p>
                             </div>
                         </div>
                     </div>

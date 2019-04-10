@@ -1,22 +1,18 @@
 var about = {
   name: "Julien Shim",
-  jobTitle: "full-stack developer",
+  jobTitle: "full-stack",
+  jobTitle2: "iOS developer",
   location: "San Francisco Bay Area",
   skills: [
-    {
-      name: "Documentation",
-      type: "soft",
-      level: 4
-    },
     {
       name: "JavaScript",
       type: "hard",
       level: 5
     },
     {
-      name: "Organization",
-      type: "soft",
-      level: 5
+      name: "Firebase",
+      type: "hard",
+      level: 4
     },
     {
       name: "Express",
@@ -24,59 +20,54 @@ var about = {
       level: 3
     },
     {
+      name: "HTML",
+      type: "hard",
+      level: 5
+    },
+    {
+      name: "Node.js",
+      type: "hard",
+      level: 4
+    },
+    {
       name: "MySQL",
       type: "hard",
       level: 3
     },
     {
-      name: "Leadership",
-      type: "soft",
-      level: 4
-    },
-    {
-      name: "Firebase",
+      name: "CSS",
       type: "hard",
-      level: 2
-    },
-    {
-      name: "HTML/CSS",
-      type: "hard",
-      level: 5
-    },
-    {
-      name: "Communication",
-      type: "soft",
-      level: 5
-    },
-    {
-      name: "NodeJS",
-      type: "hard",
-      level: 4
-    },
-    {
-      name: "Photoshop",
-      type: "hard",
-      level: 5
-    },
-    {
-      name: "React-Native",
-      type: "hard",
-      level: 2
-    },
-    {
-      name: "React",
-      type: "hard",
-      level: 3
-    },
-    {
-      name: "Collaboration",
-      type: "soft",
       level: 5
     },
     {
       name: "Redux",
       type: "hard",
+      level: 4
+    },
+    {
+      name: "Swift",
+      type: "hard",
+      level: 3
+    },
+    {
+      name: "MongoDB",
+      type: "hard",
       level: 2
+    },
+    {
+      name: "jQuery",
+      type: "soft",
+      level: 5
+    },
+    {
+      name: "React",
+      type: "hard",
+      level: 4
+    },
+    {
+      name: "Adobe CC",
+      type: "hard",
+      level: 5
     },
     {
       name: "jQuery",
@@ -84,17 +75,30 @@ var about = {
       level: 4
     },
     {
-      name: "Design",
-      type: "soft",
-      level: 5
+      name: "SASS",
+      type: "hard",
+      level: 3
     },
     {
-      name: "MongoDB",
+      name: "React-Native",
       type: "hard",
       level: 2
     }
   ],
   recentWork: [
+    {
+      title: "Swift Calculator",
+      summary:
+        "A macOS calculator app clone for iOS (iPhone).",
+      image: "assets/images/projects/swift-calculator.png",
+      disciplines: [
+        "Swift"
+      ],
+      githubRepo: "https://github.com/julienshim/Swift-Calculator-App",
+      deployedURL: "",
+      roles: ["Author"],
+      year: 2019
+    },
     {
       title: "Odin's Ravens",
       summary:
@@ -130,27 +134,6 @@ var about = {
       githubRepo: "https://github.com/cliffpham/meishi-mvp",
       deployedURL: "https://expo.io/@cliffpham/expo-sanbox",
       roles: ["QA Engineer", "Database Developer"],
-      year: 2018
-    },
-    {
-      title: "Jumpstart",
-      summary: "Job search web application tool.",
-      image: "assets/images/projects/jumpstart.png",
-      disciplines: [
-        "JavaScript",
-        "EJS",
-        "jQuery",
-        "Bootstrap",
-        "HTML",
-        "CSS",
-        "NodeJS",
-        "Express",
-        "MySQL",
-        "OAuth"
-      ],
-      githubRepo: "https://github.com/julienshim/jumpstart",
-      deployedURL: "https://obscure-beach-77511.herokuapp.com/",
-      roles: ["Database Developer", "Project Manager", "QA Engineer"],
       year: 2018
     }
   ],
@@ -199,9 +182,9 @@ var about = {
                             <div class="external-links-overlay">
                                 <p><a href="${
                                   works.githubRepo
-                                }" target="_blank">Github</a> <a href="${
-              works.deployedURL
-            }" target="_blank">Live</a></p>
+                                }" target="_blank">Github</a>${works.deployedURL && ` <a href="${
+                                  works.deployedURL
+                                }" target="_blank">Live</a>`}</p>
                             </div>
                         </div>
                     </div>
@@ -240,7 +223,9 @@ var introduction = `<h1 class='introduction-header mb-12'>Hi, my name is <span>$
     about.name
   }</span>.</h1> <h1 class='introduction-header mb-48'>I am a user-focused <span>${
     about.jobTitle
-  }</span> based in the <span>${
+  }</span> and <span>${
+    about.jobTitle2
+  }</span> developer based in the <span>${
     about.location
   }</span>.</h1><p>I love designing and building full-stack web applications.</p>`,
   i = 0,
