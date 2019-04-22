@@ -29,11 +29,6 @@ a.filter-tags {
   color: var(--teal) !important;
 }
 
-#Actual {
-  background: silver;
-  color: White;
-  padding: 20px;
-}
 .slideup,
 .slidedown {
   max-height: 0;
