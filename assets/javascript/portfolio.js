@@ -24,8 +24,7 @@ var portfolio = {
         "JavaScript",
         "CSS",
         "Bootstrap",
-        "jQuery",
-        "OAuth"
+        "jQuery"
       ],
       githubRepo: "https://github.com/Laethaka/OdinsWorld",
       deployedURL: "https://odins-ravens.herokuapp.com/",
@@ -41,9 +40,8 @@ var portfolio = {
         "Expo",
         "JavaScript",
         "Firebase",
-        "React-Native",
-        "Redux",
-        "OAuth"
+        "React Native",
+        "Redux"
       ],
       githubRepo: "https://github.com/cliffpham/meishi-mvp",
       deployedURL: "https://expo.io/@cliffpham/expo-sanbox",
@@ -61,10 +59,9 @@ var portfolio = {
         "Bootstrap",
         "HTML",
         "CSS",
-        "NodeJS",
+        "Node.js",
         "Express",
-        "MySQL",
-        "OAuth"
+        "MySQL"
       ],
       githubRepo: "https://github.com/julienshim/jumpstart",
       deployedURL: "https://obscure-beach-77511.herokuapp.com/",
@@ -81,7 +78,7 @@ var portfolio = {
         "HTML",
         "CSS",
         "Bootstrap",
-        "Facial Recognition",
+        "Microsoft Azure",
         "Firebase"
       ],
       githubRepo: "https://github.com/tomkim825/Project1-FaceAPI",
@@ -93,7 +90,7 @@ var portfolio = {
       title: "Star Wars Clicky Game",
       summary: "Stormtrooper themed memory game built with React.",
       image: "assets/images/projects/star-wars.png",
-      disciplines: ["ReactJS", "CSS", "JavaScript", "JSON"],
+      disciplines: ["ReactJS", "CSS", "JavaScript"],
       githubRepo: "https://github.com/julienshim/clicky-game",
       deployedURL: "https://julienshim.github.io/clicky-game/",
       roles: ["Author"],
@@ -115,7 +112,7 @@ var portfolio = {
       summary:
         "90s Cartoon Gifs is a dyanmic GIPHY API-based GIF search app using JavaScript and jQuery to change the HTML.",
       image: "assets/images/projects/giftastic.png",
-      disciplines: ["API", "HTML", "CSS", "JavaScript", "jQuery", "Bootstrap"],
+      disciplines: ["HTML", "CSS", "JavaScript", "jQuery", "Bootstrap"],
       githubRepo: "https://github.com/julienshim/GifTastic",
       deployedURL: "https://julienshim.github.io/GifTastic/",
       roles: ["Author"],
@@ -127,7 +124,7 @@ var portfolio = {
         "Flinders Street Station Train Schedule incorporates Firebase to host up arrival data, which is manipulated with Moment.js",
       image: "assets/images/projects/train-scheduler.png",
       disciplines: [
-        "Moment",
+        "Moment.js",
         "Firebase",
         "JavaScript",
         "Bootstrap",
@@ -167,22 +164,22 @@ var portfolio = {
 function generateProjects(filteredProjects) {
   portfolio.targets.portfolio.innerHTML = `
         ${filteredProjects
-          .map(
-            project => `
+      .map(
+        project => `
             <div class="project-container" onclick="void(0)">
                 <div class="project-content mb-12p">
                     <div class="project-image-container">
                         <img src="${
-                          project.image
-                        }" class="project-image" title="${project.title}" />
+          project.image
+          }" class="project-image" title="${project.title}" />
                         <div class="overlay">
                             <div class="text">
                                 <ul>
                                     ${project.disciplines
-                                      .map(
-                                        discipline => `<li>${discipline}</li>`
-                                      )
-                                      .join("")}
+            .map(
+              discipline => `<li>${discipline}</li>`
+            )
+            .join("")}
                                 </ul>
                             </div>
                             <div class="year-overlay">
@@ -190,10 +187,10 @@ function generateProjects(filteredProjects) {
                             </div>
                             <div class="external-links-overlay">
                                 <p><a href="${
-                                  project.githubRepo
-                                }" target="_blank">Github</a>${project.deployedURL && ` <a href="${
-                                  project.deployedURL
-                                }" target="_blank">Live</a>`}</p>
+          project.githubRepo
+          }" target="_blank">Github</a>${project.deployedURL && ` <a href="${
+          project.deployedURL
+          }" target="_blank">Live</a>`}</p>
                             </div>
                         </div>
                     </div>
@@ -203,8 +200,8 @@ function generateProjects(filteredProjects) {
                 </div>
             </div>
         `
-          )
-          .join("")}
+      )
+      .join("")}
     `;
 }
 
@@ -213,8 +210,8 @@ function generateProjects(filteredProjects) {
 function generateFilterTags(textHighlight = "") {
   var disciplines = [];
 
-  portfolio.projects.forEach(function(project) {
-    project.disciplines.forEach(function(discipline) {
+  portfolio.projects.forEach(function (project) {
+    project.disciplines.forEach(function (discipline) {
       if (
         !disciplines.some(disciplineObject =>
           disciplineObject.tagName.includes(discipline)
@@ -228,7 +225,7 @@ function generateFilterTags(textHighlight = "") {
 
         disciplines.push(newDisciplineObject);
       } else {
-        disciplines.forEach(function(disciplineObject) {
+        disciplines.forEach(function (disciplineObject) {
           if (disciplineObject.tagName === discipline) {
             disciplineObject.count++;
           }
@@ -238,7 +235,7 @@ function generateFilterTags(textHighlight = "") {
   });
 
   disciplines
-    .sort(function(a, b) {
+    .sort(function (a, b) {
       if (a.tagName < b.tagName) {
         return -1;
       }
@@ -258,21 +255,21 @@ function generateFilterTags(textHighlight = "") {
 
   portfolio.targets.filter.innerHTML = `
         ${disciplines
-          .map(discipline =>
-            discipline === "Technologies"
-              ? `<li class="filter-header">${discipline}</a></li>`
-              : `<li><a href="#" class="filter-tags isHighlighted-${
-                  discipline.isHighlighted
-                }" data-filter="${discipline.tagName}">${
-                  discipline.tagName
-                }</a> <span class="tag-count">(${discipline.count})</span></li>`
-          )
-          .join("")}
+      .map(discipline =>
+        discipline === "Technologies"
+          ? `<li class="filter-header">${discipline}</a></li>`
+          : `<li><a href="#" class="filter-tags isHighlighted-${
+          discipline.isHighlighted
+          }" data-filter="${discipline.tagName}">${
+          discipline.tagName
+          }</a> <span class="tag-count">(${discipline.count})</span></li>`
+      )
+      .join("")}
     `;
 
   var filterTags = document.querySelectorAll(".filter-tags");
-  filterTags.forEach(function(filterTag) {
-    filterTag.addEventListener("click", function(event) {
+  filterTags.forEach(function (filterTag) {
+    filterTag.addEventListener("click", function (event) {
       var filter = event.target.dataset.filter;
       event.preventDefault();
       sessionStorage.setItem("filter", filter);
@@ -295,7 +292,7 @@ function generateFilterTags(textHighlight = "") {
   });
 
   if (currentFilterSelected && currentFilterSelected.innerHTML.trim() !== "") {
-    currentFilterSelected.addEventListener("click", function(event) {
+    currentFilterSelected.addEventListener("click", function (event) {
       event.preventDefault();
       sessionStorage.setItem("filter", "All");
       currentFilterSelected.innerHTML = "";
@@ -312,7 +309,7 @@ function generateFilterTags(textHighlight = "") {
 function filterProjects(keyword) {
   var filteredProjects = [];
 
-  portfolio.projects.forEach(function(project) {
+  portfolio.projects.forEach(function (project) {
     if (project.disciplines.includes(keyword)) {
       filteredProjects.push(project);
     }
@@ -337,8 +334,8 @@ function init() {
     filterProjects(portfolio.sessionStorage.filter);
     portfolio.targets.currentFilterSelected.innerHTML = `
         <span class="filter-id" id="filterId"><a href="#">${
-          portfolio.sessionStorage.filter
-        } <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M12 11.293l10.293-10.293.707.707-10.293 10.293 10.293 10.293-.707.707-10.293-10.293-10.293 10.293-.707-.707 10.293-10.293-10.293-10.293.707-.707 10.293 10.293z"/></svg></a></span>`;
+      portfolio.sessionStorage.filter
+      } <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M12 11.293l10.293-10.293.707.707-10.293 10.293 10.293 10.293-.707.707-10.293-10.293-10.293 10.293-.707-.707 10.293-10.293-10.293-10.293.707-.707 10.293 10.293z"/></svg></a></span>`;
   }
 }
 
