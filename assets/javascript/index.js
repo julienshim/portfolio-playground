@@ -1,7 +1,6 @@
 var about = {
   name: "Julien Shim",
-  jobTitle: "full-stack",
-  jobTitle2: "iOS developer",
+  jobTitle: "full-stack developer",
   location: "San Francisco Bay Area",
   skills: [
     {
@@ -223,9 +222,7 @@ var introduction = `<h1 class='introduction-header mb-12'>Hi, my name is <span>$
     about.name
   }</span>.</h1> <h1 class='introduction-header mb-48'>I am a user-focused <span>${
     about.jobTitle
-  }</span> and <span>${
-    about.jobTitle2
-  }</span> developer based in the <span>${
+  }</span> based in the <span>${
     about.location
   }</span>.</h1><p>I love designing and building full-stack web applications.</p>`,
   i = 0,
