@@ -1,158 +1,11 @@
 var portfolio = {
-  projects: [
-    {
-      title: "Swift Calculator",
-      summary:
-        "A macOS calculator app clone for iOS (iPhone).",
-      image: "assets/images/projects/swift-calculator.png",
-      disciplines: [
-        "Swift"
-      ],
-      githubRepo: "https://github.com/julienshim/Swift-Calculator-App",
-      deployedURL: "",
-      roles: ["Author"],
-      year: 2019
-    },
-    {
-      title: "Odin's Ravens",
-      summary:
-        "Web application clone of the strategic card game Odin's Ravens.",
-      image: "assets/images/projects/odins-ravens.png",
-      disciplines: [
-        "ReactJS",
-        "Firebase",
-        "JavaScript",
-        "CSS",
-        "Bootstrap",
-        "jQuery"
-      ],
-      githubRepo: "https://github.com/Laethaka/OdinsWorld",
-      deployedURL: "https://odins-ravens.herokuapp.com/",
-      roles: ["Front-End Engineer", "QA Engineer"],
-      year: 2018
-    },
-    {
-      title: "Meishi",
-      summary:
-        "Social networking business card app for iOS and Android devices.",
-      image: "assets/images/projects/meishi.png",
-      disciplines: [
-        "Expo",
-        "JavaScript",
-        "Firebase",
-        "React Native",
-        "Redux"
-      ],
-      githubRepo: "https://github.com/cliffpham/meishi-mvp",
-      deployedURL: "https://expo.io/@cliffpham/expo-sanbox",
-      roles: ["Database Developer", "QA Engineer"],
-      year: 2018
-    },
-    {
-      title: "Jumpstart",
-      summary: "Job search web application tool.",
-      image: "assets/images/projects/jumpstart.png",
-      disciplines: [
-        "JavaScript",
-        "EJS",
-        "jQuery",
-        "Bootstrap",
-        "HTML",
-        "CSS",
-        "Node.js",
-        "Express",
-        "MySQL"
-      ],
-      githubRepo: "https://github.com/julienshim/jumpstart",
-      deployedURL: "https://obscure-beach-77511.herokuapp.com/",
-      roles: ["Database Developer", "Project Manager", "QA Engineer"],
-      year: 2018
-    },
-    {
-      title: "Marvel Me",
-      summary:
-        "Facial recognition web application to match users to the Marvel Cinematic Universe character they most resemble.",
-      image: "assets/images/projects/marvel-me.png",
-      disciplines: [
-        "jQuery",
-        "HTML",
-        "CSS",
-        "Bootstrap",
-        "Microsoft Azure",
-        "Firebase"
-      ],
-      githubRepo: "https://github.com/tomkim825/Project1-FaceAPI",
-      deployedURL: "https://tomkim825.github.io/Project1-FaceAPI/",
-      roles: ["Front-End Engineer", "UX/UI", "Design", "Project Manager"],
-      year: 2018
-    },
-    {
-      title: "Star Wars Clicky Game",
-      summary: "Stormtrooper themed memory game built with React.",
-      image: "assets/images/projects/star-wars.png",
-      disciplines: ["ReactJS", "CSS", "JavaScript"],
-      githubRepo: "https://github.com/julienshim/clicky-game",
-      deployedURL: "https://julienshim.github.io/clicky-game/",
-      roles: ["Author"],
-      year: 2018
-    },
-    {
-      title: "Zelda Rupee Game",
-      summary:
-        "Legend of Zelda themed 'Crystals Collector'-type game dynamically updated via jQuery.",
-      image: "assets/images/projects/zelda.png",
-      disciplines: ["HTML", "CSS", "JavaScript", "jQuery"],
-      githubRepo: "https://github.com/julienshim/unit-4-game",
-      deployedURL: "https://julienshim.github.io/unit-4-game/",
-      roles: ["Author"],
-      year: 2018
-    },
-    {
-      title: "90s Cartoon Gifs",
-      summary:
-        "90s Cartoon Gifs is a dyanmic GIPHY API-based GIF search app using JavaScript and jQuery to change the HTML.",
-      image: "assets/images/projects/giftastic.png",
-      disciplines: ["HTML", "CSS", "JavaScript", "jQuery", "Bootstrap"],
-      githubRepo: "https://github.com/julienshim/GifTastic",
-      deployedURL: "https://julienshim.github.io/GifTastic/",
-      roles: ["Author"],
-      year: 2018
-    },
-    {
-      title: "Flinders Street Station Train Schedule",
-      summary:
-        "Flinders Street Station Train Schedule incorporates Firebase to host up arrival data, which is manipulated with Moment.js",
-      image: "assets/images/projects/train-scheduler.png",
-      disciplines: [
-        "Moment.js",
-        "Firebase",
-        "JavaScript",
-        "Bootstrap",
-        "HTML",
-        "CSS"
-      ],
-      githubRepo: "https://github.com/julienshim/Train-Scheduler",
-      deployedURL: "https://julienshim.github.io/Train-Scheduler/",
-      roles: ["Author"],
-      year: 2018
-    },
-    {
-      title: "5th Grade Trivia",
-      summary:
-        "5th Grade Trivia is a 10 question, timed trivia game using JavaScript for the logic and jQuery to manipulate HTML",
-      image: "assets/images/projects/trivia-game.png",
-      disciplines: ["JavaScript", "jQuery", "CSS", "HTML"],
-      githubRepo: "https://github.com/julienshim/TriviaGame",
-      deployedURL: "https://julienshim.github.io/TriviaGame/",
-      roles: ["Author"],
-      year: 2018
-    }
-  ],
+  projects: [],
   targets: {
     slider: document.querySelector("#slider"),
     filter: document.querySelector(".filter"),
     portfolio: document.querySelector("#portfolio"),
-    currentFilterSelected: document.querySelector("#currentFilterSelected")
+    currentFilterSelected: document.querySelector("#currentFilterSelected"),
+    filterTags: document.querySelectorAll(".filter-tags")
   },
   sessionStorage: {
     filter: sessionStorage.getItem("filter")
@@ -164,22 +17,23 @@ var portfolio = {
 function generateProjects(filteredProjects) {
   portfolio.targets.portfolio.innerHTML = `
         ${filteredProjects
-      .map(
-        project => `
+          .map(
+            project => `
             <div class="project-container" onclick="void(0)">
                 <div class="project-content mb-12p">
                     <div class="project-image-container">
                         <img src="${
-          project.image
-          }" class="project-image" title="${project.title}" />
+                          project.image
+                        }" class="project-image" title="${project.title}" />
                         <div class="overlay">
                             <div class="text">
                                 <ul>
                                     ${project.disciplines
-            .map(
-              discipline => `<li>${discipline}</li>`
-            )
-            .join("")}
+                                      .map(
+                                        discipline =>
+                                          `<li class="filter-tags" data-filter="${discipline}">${discipline}</li>`
+                                      )
+                                      .join("")}
                                 </ul>
                             </div>
                             <div class="year-overlay">
@@ -187,10 +41,9 @@ function generateProjects(filteredProjects) {
                             </div>
                             <div class="external-links-overlay">
                                 <p><a href="${
-          project.githubRepo
-          }" target="_blank">Github</a>${project.deployedURL && ` <a href="${
-          project.deployedURL
-          }" target="_blank">Live</a>`}</p>
+                                  project.githubRepo
+                                }" target="_blank">Github</a>${project.deployedURL &&
+              ` <a href="${project.deployedURL}" target="_blank">Live</a>`}</p>
                             </div>
                         </div>
                     </div>
@@ -200,9 +53,10 @@ function generateProjects(filteredProjects) {
                 </div>
             </div>
         `
-      )
-      .join("")}
+          )
+          .join("")}
     `;
+  clickTags();
 }
 
 // Filter Projects - Note: Object Literals
@@ -210,8 +64,8 @@ function generateProjects(filteredProjects) {
 function generateFilterTags(textHighlight = "") {
   var disciplines = [];
 
-  portfolio.projects.forEach(function (project) {
-    project.disciplines.forEach(function (discipline) {
+  portfolio.projects.forEach(function(project) {
+    project.disciplines.forEach(function(discipline) {
       if (
         !disciplines.some(disciplineObject =>
           disciplineObject.tagName.includes(discipline)
@@ -225,7 +79,7 @@ function generateFilterTags(textHighlight = "") {
 
         disciplines.push(newDisciplineObject);
       } else {
-        disciplines.forEach(function (disciplineObject) {
+        disciplines.forEach(function(disciplineObject) {
           if (disciplineObject.tagName === discipline) {
             disciplineObject.count++;
           }
@@ -235,7 +89,7 @@ function generateFilterTags(textHighlight = "") {
   });
 
   disciplines
-    .sort(function (a, b) {
+    .sort(function(a, b) {
       if (a.tagName < b.tagName) {
         return -1;
       }
@@ -255,51 +109,57 @@ function generateFilterTags(textHighlight = "") {
 
   portfolio.targets.filter.innerHTML = `
         ${disciplines
-      .map(discipline =>
-        discipline === "Technologies"
-          ? `<li class="filter-header">${discipline}</a></li>`
-          : `<li><a href="#" class="filter-tags isHighlighted-${
-          discipline.isHighlighted
-          }" data-filter="${discipline.tagName}">${
-          discipline.tagName
-          }</a> <span class="tag-count">(${discipline.count})</span></li>`
-      )
-      .join("")}
+          .map(discipline =>
+            discipline === "Technologies"
+              ? `<li class="filter-header">${discipline}</a></li>`
+              : `<li><a href="#" class="filter-tags isHighlighted-${discipline.isHighlighted}" data-filter="${discipline.tagName}">${discipline.tagName}</a> <span class="tag-count">(${discipline.count})</span></li>`
+          )
+          .join("")}
     `;
+  clickTags();
+}
 
-  var filterTags = document.querySelectorAll(".filter-tags");
-  filterTags.forEach(function (filterTag) {
-    filterTag.addEventListener("click", function (event) {
+function clickTags() {
+  // var filterTags = document.querySelectorAll(".filter-tags");
+  document.querySelectorAll(".filter-tags").forEach(function(filterTag) {
+    filterTag.addEventListener("click", function(event) {
       var filter = event.target.dataset.filter;
       event.preventDefault();
       sessionStorage.setItem("filter", filter);
       if (filter === "All") {
         generateFilterTags("All");
         generateProjects(portfolio.projects);
-        portfolio.targets.slider;
-        portfolio.targets.slider.classList.toggle("slideup");
-        portfolio.targets.slider.classList.toggle("slidedown");
-        currentFilterSelected.innerHTML = "";
+        // portfolio.targets.slider;
+        if (portfolio.targets.slider.classList.contains("slidedown")) {
+          portfolio.targets.slider.classList.toggle("slideup");
+          portfolio.targets.slider.classList.toggle("slidedown");
+        }
+        portfolio.targets.currentFilterSelected.innerHTML = "";
       } else {
         generateFilterTags(filter);
         filterProjects(filter);
-        portfolio.targets.slider.classList.toggle("slideup");
-        portfolio.targets.slider.classList.toggle("slidedown");
-        currentFilterSelected.innerHTML = `
+        if (portfolio.targets.slider.classList.contains("slidedown")) {
+          portfolio.targets.slider.classList.toggle("slideup");
+          portfolio.targets.slider.classList.toggle("slidedown");
+        }
+        portfolio.targets.currentFilterSelected.innerHTML = `
                     <span class="filter-id" id="filterId"><a href="#">${filter} <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M12 11.293l10.293-10.293.707.707-10.293 10.293 10.293 10.293-.707.707-10.293-10.293-10.293 10.293-.707-.707 10.293-10.293-10.293-10.293.707-.707 10.293 10.293z"/></svg></a></span>`;
       }
     });
   });
 
-  if (currentFilterSelected && currentFilterSelected.innerHTML.trim() !== "") {
-    currentFilterSelected.addEventListener("click", function (event) {
+  if (portfolio.targets.currentFilterSelected) {
+    // if (portfolio.targets.currentFilterSelected && portfolio.targets.currentFilterSelected.innerHTML.trim() !== "") {
+    portfolio.targets.currentFilterSelected.addEventListener("click", function(
+      event
+    ) {
       event.preventDefault();
       sessionStorage.setItem("filter", "All");
-      currentFilterSelected.innerHTML = "";
+      portfolio.targets.currentFilterSelected.innerHTML = "";
       generateFilterTags("All");
-      if (slider.classList.contains("slidedown")) {
-        slider.classList.toggle("slideup");
-        slider.classList.toggle("slidedown");
+      if (portfolio.targets.slider.classList.contains("slidedown")) {
+        portfolio.targets.slider.classList.toggle("slideup");
+        portfolio.targets.slider.classList.toggle("slidedown");
       }
       generateProjects(portfolio.projects);
     });
@@ -309,7 +169,7 @@ function generateFilterTags(textHighlight = "") {
 function filterProjects(keyword) {
   var filteredProjects = [];
 
-  portfolio.projects.forEach(function (project) {
+  portfolio.projects.forEach(function(project) {
     if (project.disciplines.includes(keyword)) {
       filteredProjects.push(project);
     }
@@ -333,10 +193,28 @@ function init() {
     generateFilterTags(portfolio.sessionStorage.filter);
     filterProjects(portfolio.sessionStorage.filter);
     portfolio.targets.currentFilterSelected.innerHTML = `
-        <span class="filter-id" id="filterId"><a href="#">${
-      portfolio.sessionStorage.filter
-      } <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M12 11.293l10.293-10.293.707.707-10.293 10.293 10.293 10.293-.707.707-10.293-10.293-10.293 10.293-.707-.707 10.293-10.293-10.293-10.293.707-.707 10.293 10.293z"/></svg></a></span>`;
+        <span class="filter-id" id="filterId"><a href="#">${portfolio.sessionStorage.filter} <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M12 11.293l10.293-10.293.707.707-10.293 10.293 10.293 10.293-.707.707-10.293-10.293-10.293 10.293-.707-.707 10.293-10.293-10.293-10.293.707-.707 10.293 10.293z"/></svg></a></span>`;
   }
 }
 
-init();
+// init();
+
+var xhr = new XMLHttpRequest();
+xhr.open(
+  "GET",
+  "https://raw.githubusercontent.com/julienshim/Portfolio-Playground/master/data-test.json"
+);
+xhr.onload = function() {
+  if (this.status === 200) {
+    try {
+      const resObj = JSON.parse(this.responseText);
+      portfolio.projects = resObj.projects;
+      init();
+    } catch (error) {
+      console.warn("There was an error in the JSON. Could not parse!");
+    }
+  } else {
+    console.warn("Did not receive 200 OK for response!");
+  }
+};
+xhr.send();
