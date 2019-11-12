@@ -130,18 +130,12 @@ function clickTags() {
         generateFilterTags("All");
         generateProjects(portfolio.projects);
         // portfolio.targets.slider;
-        if (portfolio.targets.slider.classList.contains("slidedown")) {
-          portfolio.targets.slider.classList.toggle("slideup");
-          portfolio.targets.slider.classList.toggle("slidedown");
-        }
+        slide();
         portfolio.targets.currentFilterSelected.innerHTML = "";
       } else {
         generateFilterTags(filter);
         filterProjects(filter);
-        if (portfolio.targets.slider.classList.contains("slidedown")) {
-          portfolio.targets.slider.classList.toggle("slideup");
-          portfolio.targets.slider.classList.toggle("slidedown");
-        }
+        slide();
         portfolio.targets.currentFilterSelected.innerHTML = `
                     <span class="filter-id" id="filterId"><a href="#">${filter} <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M12 11.293l10.293-10.293.707.707-10.293 10.293 10.293 10.293-.707.707-10.293-10.293-10.293 10.293-.707-.707 10.293-10.293-10.293-10.293.707-.707 10.293 10.293z"/></svg></a></span>`;
       }
@@ -157,12 +151,16 @@ function clickTags() {
       sessionStorage.setItem("filter", "All");
       portfolio.targets.currentFilterSelected.innerHTML = "";
       generateFilterTags("All");
-      if (portfolio.targets.slider.classList.contains("slidedown")) {
-        portfolio.targets.slider.classList.toggle("slideup");
-        portfolio.targets.slider.classList.toggle("slidedown");
-      }
+      slide();
       generateProjects(portfolio.projects);
     });
+  }
+}
+
+function slide() {
+  if (portfolio.targets.slider.classList.contains("slidedown")) {
+    portfolio.targets.slider.classList.toggle("slideup");
+    portfolio.targets.slider.classList.toggle("slidedown");
   }
 }
 
