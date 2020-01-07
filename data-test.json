@@ -13,7 +13,7 @@
     {
       "title": "Pomodoro Clock",
       "summary": "I'm not good at everything, I just do my best at everything. Sometimes you've gotta hide the medicine in the food.",
-      "image": "assets/images/projects/test.png",
+      "image": "assets/images/projects/pomodoro-clock.png",
       "disciplines": ["ReactJS", "SCSS"],
       "githubRepo": "https://github.com/julienshim",
       "deployedURL": "",
@@ -23,7 +23,7 @@
     {
       "title": "JavaScript Calculator",
       "summary": "I'm not good at everything, I just do my best at everything. Sometimes you've gotta hide the medicine in the food.",
-      "image": "assets/images/projects/test.png",
+      "image": "assets/images/projects/javascript-calculator.png",
       "disciplines": ["ReactJS", "SCSS"],
       "githubRepo": "https://github.com/julienshim",
       "deployedURL": "",
@@ -63,7 +63,7 @@
     {
       "title": "Random Quote Machine",
       "summary": "I'm not good at everything, I just do my best at everything. Sometimes you've gotta hide the medicine in the food.",
-      "image": "assets/images/projects/test.png",
+      "image": "assets/images/projects/random-quote-machine.png",
       "disciplines": ["ReactJS", "SCSS"],
       "githubRepo": "https://github.com/julienshim",
       "deployedURL": "",
@@ -83,7 +83,7 @@
     {
       "title": "Product Landing Page",
       "summary": "I'm not good at everything, I just do my best at everything. Sometimes you've gotta hide the medicine in the food.",
-      "image": "assets/images/projects/test.png",
+      "image": "assets/images/projects/product-landing-page.png",
       "disciplines": ["HTML", "CSS", "JavaScript"],
       "githubRepo": "https://github.com/julienshim",
       "deployedURL": "",
