@@ -33,7 +33,7 @@
     {
       "title": "Drum Machine",
       "summary": "I'm not good at everything, I just do my best at everything. Sometimes you've gotta hide the medicine in the food.",
-      "image": "assets/images/projects/test.png",
+      "image": "assets/images/projects/drum-machine.png",
       "disciplines": ["ReactJS", "SCSS"],
       "githubRepo": "https://github.com/julienshim",
       "deployedURL": "",
@@ -43,7 +43,7 @@
     {
       "title": "Markdown Preview",
       "summary": "I'm not good at everything, I just do my best at everything. Sometimes you've gotta hide the medicine in the food.",
-      "image": "assets/images/projects/test.png",
+      "image": "assets/images/projects/markdown-preview.png",
       "disciplines": ["ReactJS", "SCSS"],
       "githubRepo": "https://github.com/julienshim",
       "deployedURL": "",
