@@ -93,7 +93,7 @@
     {
       "title": "Survey Form",
       "summary": "I'm not good at everything, I just do my best at everything. Sometimes you've gotta hide the medicine in the food.",
-      "image": "assets/images/projects/test.png",
+      "image": "assets/images/projects/survey-form.png",
       "disciplines": ["HTML", "CSS"],
       "githubRepo": "https://github.com/julienshim",
       "deployedURL": "",
