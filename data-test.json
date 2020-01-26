@@ -73,7 +73,7 @@
     {
       "title": "Technical Document Page",
       "summary": "I'm not good at everything, I just do my best at everything. Sometimes you've gotta hide the medicine in the food.",
-      "image": "assets/images/projects/test.png",
+      "image": "assets/images/projects/technical-document-page.png",
       "disciplines": ["HTML", "CSS", "JavaScript"],
       "githubRepo": "https://github.com/julienshim",
       "deployedURL": "",
