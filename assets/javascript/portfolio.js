@@ -208,6 +208,7 @@ xhr.onload = function() {
       const resObj = JSON.parse(this.responseText);
       portfolio.projects = resObj.projects;
       init();
+      console.log("Projects Loaded.")
     } catch (error) {
       console.warn("There was an error in the JSON. Could not parse!");
     }
