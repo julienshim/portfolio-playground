@@ -1,5 +1,5 @@
 @import url("./reset.css");
-@import url("https://fonts.googleapis.com/css?family=Crimson+Text|PT+Sans|Playfair+Display&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Crimson+Text|PT+Sans:700|Playfair+Display&display=swap");
 @import url("./nav.css");
 @import url("./sidebar.css");
 @import url("./social.css");
@@ -17,7 +17,8 @@
   --teal-30: rgba(22, 177, 181, 0.3); /*#16B1B5*/
   --teal-50: rgba(22, 177, 181, 0.5); /*#16B1B5*/
   --teal-70: rgba(22, 177, 181, 0.7); /*#16B1B5*/
-  --font-family-serif: "Playfair Display", serif;
+  --font-logo: "Playfair Display", serif;
+  --font-family-serif: "Crimson Text", serif;
   --font-family-sans-serif: "PT Sans", sans-serif;
 }
 

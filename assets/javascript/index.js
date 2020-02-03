@@ -3,138 +3,86 @@ var about = {
   jobTitle: "full-stack developer",
   location: "San Francisco Bay Area",
   skills: [
-    {
-      name: "JavaScript",
-      type: "hard",
-      level: 5
-    },
-    {
-      name: "Firebase",
-      type: "hard",
-      level: 4
-    },
-    {
-      name: "Express",
-      type: "hard",
-      level: 3
-    },
-    {
-      name: "HTML",
-      type: "hard",
-      level: 5
-    },
-    {
-      name: "Node.js",
-      type: "hard",
-      level: 4
-    },
-    {
-      name: "MySQL",
-      type: "hard",
-      level: 3
-    },
-    {
-      name: "CSS",
-      type: "hard",
-      level: 5
-    },
-    {
-      name: "Redux",
-      type: "hard",
-      level: 4
-    },
-    {
-      name: "Swift",
-      type: "hard",
-      level: 3
-    },
-    {
-      name: "MongoDB",
-      type: "hard",
-      level: 2
-    },
-    {
-      name: "jQuery",
-      type: "soft",
-      level: 5
-    },
-    {
-      name: "React",
-      type: "hard",
-      level: 4
-    },
-    {
-      name: "Adobe CC",
-      type: "hard",
-      level: 5
-    },
-    {
-      name: "jQuery",
-      type: "hard",
-      level: 4
-    },
-    {
-      name: "SASS",
-      type: "hard",
-      level: 3
-    },
-    {
-      name: "React-Native",
-      type: "hard",
-      level: 2
-    }
-  ],
-  recentWork: [
-    {
-      title: "Swift Calculator",
-      summary:
-        "A macOS calculator app clone for iOS (iPhone).",
-      image: "assets/images/projects/swift-calculator.png",
-      disciplines: [
-        "Swift"
-      ],
-      githubRepo: "https://github.com/julienshim/Swift-Calculator-App",
-      deployedURL: "",
-      roles: ["Author"],
-      year: 2019
-    },
-    {
-      title: "Odin's Ravens",
-      summary:
-        "Web application clone of the strategic card game Odin's Ravens.",
-      image: "assets/images/projects/odins-ravens.png",
-      disciplines: [
-        "ReactJS",
-        "Firebase",
-        "JavaScript",
-        "CSS",
-        "Bootstrap",
-        "jQuery",
-        "OAuth"
-      ],
-      githubRepo: "https://github.com/Laethaka/OdinsWorld",
-      deployedURL: "https://odins-ravens.herokuapp.com/",
-      roles: ["Front End Engineer", "QA Engineer"],
-      year: 2018
-    },
-    {
-      title: "Meishi",
-      summary:
-        "Social networking business card app for iOS and Android devices.",
-      image: "assets/images/projects/meishi.png",
-      disciplines: [
-        "Expo",
-        "JavaScript",
-        "Firebase",
-        "React-Native",
-        "Redux",
-        "OAuth"
-      ],
-      githubRepo: "https://github.com/cliffpham/meishi-mvp",
-      deployedURL: "https://expo.io/@cliffpham/expo-sanbox",
-      roles: ["QA Engineer", "Database Developer"],
-      year: 2018
-    }
+  //   {
+  //     name: "JavaScript",
+  //     type: "hard",
+  //     level: 5
+  //   },
+  //   {
+  //     name: "Firebase",
+  //     type: "hard",
+  //     level: 4
+  //   },
+  //   {
+  //     name: "Express",
+  //     type: "hard",
+  //     level: 3
+  //   },
+  //   {
+  //     name: "HTML",
+  //     type: "hard",
+  //     level: 5
+  //   },
+  //   {
+  //     name: "Node.js",
+  //     type: "hard",
+  //     level: 4
+  //   },
+  //   {
+  //     name: "MySQL",
+  //     type: "hard",
+  //     level: 3
+  //   },
+  //   {
+  //     name: "CSS",
+  //     type: "hard",
+  //     level: 5
+  //   },
+  //   {
+  //     name: "Redux",
+  //     type: "hard",
+  //     level: 4
+  //   },
+  //   {
+  //     name: "Swift",
+  //     type: "hard",
+  //     level: 3
+  //   },
+  //   {
+  //     name: "MongoDB",
+  //     type: "hard",
+  //     level: 2
+  //   },
+  //   {
+  //     name: "jQuery",
+  //     type: "soft",
+  //     level: 5
+  //   },
+  //   {
+  //     name: "React",
+  //     type: "hard",
+  //     level: 4
+  //   },
+  //   {
+  //     name: "Adobe CC",
+  //     type: "hard",
+  //     level: 5
+  //   },
+  //   {
+  //     name: "jQuery",
+  //     type: "hard",
+  //     level: 4
+  //   },
+  //   {
+  //     name: "SASS",
+  //     type: "hard",
+  //     level: 3
+  //   },
+  //   {
+  //     name: "React-Native",
+  //     type: "hard",
+  //     level: 2
+  //   }
   ],
   targets: {
     introduction: document.querySelector("#typedIntroduction"),
@@ -170,7 +118,7 @@ var about = {
                                 <ul>
                                     ${works.disciplines
                                       .map(
-                                        discipline => `<li>${discipline}</li>`
+                                        discipline => `<li class="filter-tags" data-filter="${discipline}">${discipline}</li>`
                                       )
                                       .join("")}
                                 </ul>
@@ -196,6 +144,7 @@ var about = {
           )
           .join("")}
     `;
+    clickTags();
   },
   smoothScrolling: function() {
     this.targets.ahref.forEach(anchor => {
@@ -214,7 +163,6 @@ var about = {
   }
 };
 
-about.init();
 
 // Introduction - Note: Object Literals
 
@@ -228,6 +176,18 @@ var introduction = `<h1 class='introduction-header mb-12'>Hi, my name is <span>$
   i = 0,
   isTag,
   text;
+
+function clickTags() {
+  document.querySelectorAll(".filter-tags").forEach(function(filterTag){
+    filterTag.addEventListener("click", function(event) {
+      var filter = event.target.dataset.filter;
+      event.preventDefault();
+      sessionStorage.setItem("filter", filter);
+      // var portfolio = '/portfolio.html'
+      window.location.href = 'portfolio.html'
+    })
+  })
+}
 
 function screenType() {
   character = introduction.slice(0, i++);
@@ -251,3 +211,24 @@ function screenType() {
 
 screenType();
 
+var xhr = new XMLHttpRequest();
+xhr.open(
+  "GET",
+  "https://raw.githubusercontent.com/julienshim/Portfolio-Playground/master/data-test.json"
+);
+xhr.onload = function() {
+  if (this.status === 200) {
+    try {
+      const resObj = JSON.parse(this.responseText);
+      about.recentWork = resObj.projects.slice(0, 3);
+      console.log(about.recentWork)
+      about.init();
+      console.log("Projects Loaded.")
+    } catch (error) {
+      console.warn("There was an error in the JSON. Could not parse!");
+    }
+  } else {
+    console.warn("Did not receive 200 OK for response!");
+  }
+};
+xhr.send();
