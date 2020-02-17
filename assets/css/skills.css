@@ -14,21 +14,22 @@ dl.skills-bubble-diagram dt {
 }
 
 /* Hard Skills */
-  
-dl.skills-bubble-diagram dt.hard-skill-2 {
-  width: 3rem;
-  height: 3rem;
-  line-height: 3rem;
-  background-color: var(--teal-10);
-  font-size: 0.5rem;
-
-}
 
 dl.skills-bubble-diagram dt.hard-skill-3 {
   vertical-align: top;
   width: 5rem;
   height: 5rem;
   line-height: 5rem;
+  font-size: 0.7rem;
+  background-color: var(--teal-30);
+}
+
+dl.skills-bubble-diagram dt.hard-skill-3-alt {
+  vertical-align: top;
+  width: 5rem;
+  height: 3rem;
+  line-height: 0.5rem;
+  padding-top: 2rem;
   font-size: 0.7rem;
   background-color: var(--teal-30);
 }
@@ -43,43 +44,6 @@ dl.skills-bubble-diagram dt.hard-skill-4 {
 }
 
 dl.skills-bubble-diagram dt.hard-skill-5 {
-  width: 9rem;
-  height: 9rem;
-  line-height: 9rem;
-  font-size: 1.1rem;
-  background-color: var(--teal-70);
-}
-
-/* Soft Skills */
-
-dl.skills-bubble-diagram dt.soft-skill-2 {
-  width: 3rem;
-  height: 3rem;
-  line-height: 3rem;
-  background-color: var(--teal-10);
-  font-size: 0.5rem;
-}
-
-dl.skills-bubble-diagram dt.soft-skill-3 {
-  vertical-align: top;
-  width: 5rem;
-  height: 5rem;
-  line-height: 5rem;
-  font-size: 0.7em;
-  background-color: var(--teal-30);
-}
-
-dl.skills-bubble-diagram dt.soft-skill-4 {
-  vertical-align: bottom;
-  width: 7rem;
-  height: 7rem;
-  line-height: 7rem;
-  font-size: 0.9rem;
-  background-color: var(--teal-50);
-
-}
-
-dl.skills-bubble-diagram dt.soft-skill-5 {
   width: 9rem;
   height: 9rem;
   line-height: 9rem;
