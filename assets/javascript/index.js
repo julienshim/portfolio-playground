@@ -12,43 +12,60 @@ var about = {
   generateSkills: function() {
     var disciplines = [];
 
-  about.recentWork.forEach(function(project) {
-    project.disciplines.forEach(function(discipline) {
-      if (
-        !disciplines.some(disciplineObject =>
-          disciplineObject.tagName.includes(discipline)
-        )
-      ) {
-        var newDisciplineObject = {
-          tagName: discipline,
-          count: 1,
-        };
-
-        disciplines.push(newDisciplineObject);
-      } else {
-        disciplines.forEach(function(disciplineObject) {
-          if (disciplineObject.tagName === discipline) {
-            disciplineObject.count++;
-          }
-        });
-      }
+    about.recentWork.forEach(function(project) {
+      project.disciplines.forEach(function(discipline) {
+        if (
+          !disciplines.some(disciplineObject =>
+            disciplineObject.tagName.includes(discipline)
+          )
+        ) {
+          var newDisciplineObject = {
+            tagName: discipline,
+            count: 1
+          };
+          disciplines.push(newDisciplineObject);
+        } else {
+          disciplines.forEach(function(disciplineObject) {
+            if (disciplineObject.tagName === discipline) {
+              disciplineObject.count++;
+            }
+          });
+        }
+      });
     });
-  });
-   console.log(disciplines);
     this.targets.skills.innerHTML = `
         ${disciplines
-          .map(
-            discipline => `
-            <dt class="soft-skill-${discipline.count >= 5 ? 5 : discipline.count + 1}">${discipline.tagName}</dt>
-            <dd>${discipline.count}</dd>
-        `
-          )
+          .sort((a, b) => {
+            const aTag = a.tagName.toLowerCase();
+            const bTag = b.tagName.toLowerCase();
+            if (aTag < bTag) {
+              return -1
+            } else if (aTag > bTag) {
+              return 1
+            } else {
+              return 0
+            }
+          })
+          .map(discipline => {
+            const isTwo = discipline.tagName.split(" ").length === 2;
+            return `
+              <dt class="hard-skill-${
+                discipline.count >= 4 ? 5 : discipline.count + 2
+              }${isTwo ? "-alt" : ""}">${
+              isTwo
+                ? discipline.tagName.split(" ").join(`<br>`)
+                : discipline.tagName
+            }</dt>
+              <dd>${discipline.count}</dd>
+          `;
+          })
           .join("")}
     `;
   },
   generateRecentWork: function() {
     this.targets.recentWork.innerHTML = `
-        ${about.recentWork.slice(0, 3)
+        ${about.recentWork
+          .slice(0, 3)
           .map(
             works => `
             <div class="project-container" onclick="void(0)">
@@ -145,7 +162,6 @@ function screenType() {
     setTimeout(screenType, 25);
   }
 }
-
 
 var xhr = new XMLHttpRequest();
 xhr.open(
