@@ -13,7 +13,6 @@
   --charcoal-70: rgba(28, 33, 39, 0.7); /*#1C2127*/
   --liquid-white: rgba(248, 249, 251, 1); /*F8F9FB*/
   --teal: rgba(22, 177, 181, 1); /*#16B1B5*/
-  --teal-10: rgba(22, 177, 181, 0.1); /*#16B1B5*/
   --teal-30: rgba(22, 177, 181, 0.3); /*#16B1B5*/
   --teal-50: rgba(22, 177, 181, 0.5); /*#16B1B5*/
   --teal-70: rgba(22, 177, 181, 0.7); /*#16B1B5*/
@@ -26,6 +25,10 @@ body {
   background-color: var(--liquid-white);
   font-family: var(--font-family-serif);
   font-size: 12px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 /* body.hidden {  <---- why was this put in place 11/09
