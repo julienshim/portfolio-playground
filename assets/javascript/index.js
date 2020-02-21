@@ -51,7 +51,7 @@ var about = {
             return `
               <dt class="hard-skill-${
                 discipline.count >= 4 ? 5 : discipline.count + 2
-              }${isTwo ? "-alt" : ""}">${
+              }${isTwo ? "-alt" : ""}" data-filter="${discipline.tagName}">${
               isTwo
                 ? discipline.tagName.split(" ").join(`<br>`)
                 : discipline.tagName
