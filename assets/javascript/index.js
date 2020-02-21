@@ -49,7 +49,7 @@ var about = {
           .map(discipline => {
             const isTwo = discipline.tagName.split(" ").length === 2;
             return `
-              <dt class="hard-skill-${
+              <dt class="filter-tags hard-skill-${
                 discipline.count >= 4 ? 5 : discipline.count + 2
               }${isTwo ? "-alt" : ""}" data-filter="${discipline.tagName}">${
               isTwo
@@ -61,6 +61,7 @@ var about = {
           })
           .join("")}
     `;
+    clickTags();
   },
   generateRecentWork: function() {
     this.targets.recentWork.innerHTML = `
