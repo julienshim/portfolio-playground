@@ -6,6 +6,7 @@ var portfolio = {
     portfolio: document.querySelector("#portfolio"),
     currentFilterSelected: document.querySelector("#currentFilterSelected"),
     filterTags: document.querySelectorAll(".filter-tags")
+    // filterSVG: document.querySelector("#filterSVG")
   },
   sessionStorage: {
     filter: sessionStorage.getItem("filter")
@@ -18,41 +19,43 @@ function generateProjects(filteredProjects) {
   portfolio.targets.portfolio.innerHTML = `
         ${filteredProjects
           .map(
-            project => `
-            <div class="project-container" onclick="void(0)">
-                <div class="project-content mb-12p">
-                    <div class="project-image-container">
-                        <img src="${
-                          project.image
-                        }" class="project-image" title="${project.title}" />
-                        <div class="overlay">
-                            <div class="text">
-                                <ul>
-                                    ${project.disciplines
-                                      .map(
-                                        discipline =>
-                                          `<li class="filter-tags" data-filter="${discipline}">${discipline}</li>`
-                                      )
-                                      .join("")}
-                                </ul>
-                            </div>
-                            <div class="year-overlay">
-                                <p>${project.year}</p>
-                            </div>
-                            <div class="external-links-overlay">
-                                <p><a href="${
-                                  project.githubRepo
-                                }" target="_blank">Github</a>${project.deployedURL &&
-              ` <a href="${project.deployedURL}" target="_blank">Live</a>`}</p>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="project-title">${project.title}</p>
-                    <p class="disciplines">${project.roles.join(", ")}</p>
-                    <p class="summary">${project.summary}</p>
-                </div>
-            </div>
-        `
+            project => {
+              return `
+              <div class="project-container" onclick="void(0)">
+                  <div class="project-content mb-12p">
+                      <div class="project-image-container">
+                          <img src="${
+                            project.image
+                          }" class="project-image" title="${project.title}" />
+                          <div class="overlay">
+                              <div class="text">
+                                  <ul>
+                                      ${project.disciplines
+                                        .map(
+                                          discipline =>
+                                            `<li class="filter-tags" data-filter="${discipline}">${discipline}</li>`
+                                        )
+                                        .join("")}
+                                  </ul>
+                              </div>
+                              <div class="year-overlay">
+                                  <p>${project.year}</p>
+                              </div>
+                              <div class="external-links-overlay">
+                                  <p><a href="${
+                                    project.githubRepo
+                                  }" target="_blank">Github</a>${project.deployedURL &&
+                ` <a href="${project.deployedURL}" target="_blank">Live</a>`}</p>
+                              </div>
+                          </div>
+                      </div>
+                      <p class="project-title">${project.title}</p>
+                      <p class="disciplines">${project.roles.join(", ")}</p>
+                      <p class="summary">${project.summary}</p>
+                  </div>
+              </div>
+          `
+            }
           )
           .join("")}
     `;
@@ -162,6 +165,8 @@ function slide() {
     portfolio.targets.slider.classList.toggle("slideup");
     portfolio.targets.slider.classList.toggle("slidedown");
   }
+  // portfolio.targets.filterSVG.classList.toggle("rotate");
+  // console.log("in here");
 }
 
 function filterProjects(keyword) {
