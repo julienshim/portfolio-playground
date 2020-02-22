@@ -11,6 +11,8 @@ dl.skills-bubble-diagram dt {
   display: inline-block;
   vertical-align: top;
   border-radius: 50%;
+  border: 1px solid transparent;
+  cursor: pointer;
 }
 
 /* Hard Skills */
@@ -49,4 +51,14 @@ dl.skills-bubble-diagram dt.hard-skill-5 {
   line-height: 9rem;
   font-size: 1.1rem;
   background-color: var(--teal-70);
+}
+
+dl.skills-bubble-diagram dt:hover {
+  background-color: transparent;
+  border: 1px solid var(--teal-70);
+  -webkit-transition: all 0.8s ease;
+  -moz-transition: all 0.8s ease;
+  -ms-transition: all 0.8s ease;
+  -o-transition: all 0.8s ease;
+  transition: all 0.8s ease;
 }
