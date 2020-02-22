@@ -9,6 +9,7 @@
 
 :root {
   --dust: rgba(163, 165, 167, 1); /*#a3a5a7*/
+  --dust-70: rgba(163, 165, 167, 0.3); /*#a3a5a7*/
   --charcoal: rgba(28, 33, 39, 1); /*#1C2127*/
   --charcoal-70: rgba(28, 33, 39, 0.7); /*#1C2127*/
   --liquid-white: rgba(248, 249, 251, 1); /*F8F9FB*/

@@ -134,6 +134,17 @@ div.text li {
   border-bottom-right-radius: 50px;
   border-bottom-left-radius: 50px;
   font-family: var(--font-family-sans-serif);
+  cursor: pointer;
+}
+
+div.text li:hover {
+  color: var(--dust-70);
+  border: 1px solid var(--dust-70);
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .project-title {
