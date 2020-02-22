@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
   var sidebarSocialItems = document.querySelectorAll(".sidebar-social-item");
   var slider = document.querySelector("#slider");
   var trigger = document.querySelector("#sliderTrigger");
+  var filterSVG = document.querySelector("#filterSVG");
 
   // Sidebar Event Listeners
 
@@ -40,6 +41,7 @@ document.addEventListener("DOMContentLoaded", function() {
       console.log(slider.classList);
       slider.classList.toggle("slideup");
       slider.classList.toggle("slidedown");
+      filterSVG.classList.toggle("rotate");
     });
   }
 
