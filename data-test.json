@@ -127,26 +127,6 @@
       "year": 2018
     },
     {
-      "title": "Jumpstart",
-      "summary": "Job search web application tool.",
-      "image": "assets/images/projects/jumpstart.png",
-      "disciplines": [
-        "JavaScript",
-        "EJS",
-        "jQuery",
-        "Bootstrap",
-        "HTML",
-        "CSS",
-        "Node.js",
-        "Express",
-        "MySQL"
-      ],
-      "githubRepo": "https://github.com/julienshim/jumpstart",
-      "deployedURL": "https://obscure-beach-77511.herokuapp.com/",
-      "roles": ["Database Developer", "Project Manager", "QA Engineer"],
-      "year": 2018
-    },
-    {
       "title": "Marvel Me",
       "summary": "Facial recognition web application to match users to the Marvel Cinematic Universe character they most resemble.",
       "image": "assets/images/projects/marvel-me.png",
