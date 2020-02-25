@@ -1,48 +1,48 @@
 footer {
-    max-width: 1200px;
-    margin: 0 3%;
-    color: var(--dust);
-    font-size: 0.83rem;
+  max-width: 1200px;
+  margin: 0 3%;
+  color: var(--dust);
+  font-size: 0.83rem;
 }
 
 div.social-flex-footer ul {
-    display: flex;
-    justify-content: space-between;
-    list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
 }
 
 div.social-flex-footer ul > li {
-    width: calc(100%/4);
-    border: 1px solid var(--dust);
+  width: calc(100% / 4);
+  border: 1px solid var(--dust);
 }
 
 div.social-flex-footer ul > li:first-child {
-    border-right: none;
+  border-right: none;
 }
 
 div.social-flex-footer ul > li:nth-child(2) {
-    border-right: none;
+  border-right: none;
 }
 
 div.social-flex-footer ul > li:last-child {
-    border-left: none;
+  border-left: none;
 }
 
 a.footer-social {
-    display: block;
-    padding: 24px 0 24px 0;
-    width: 100%;
-    -webkit-transition: all .8s ease;
-    -moz-transition: all .8s ease;
-    -ms-transition: all .8s ease;
-    -o-transition: all .8s ease;
-    transition: all .8s ease;
+  display: block;
+  padding: 24px 0 24px 0;
+  width: 100%;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 a.footer-social:hover {
-    background-color: var(--teal-30);
+  background-color: var(--teal-30);
 }
 
 a.footer-social:hover svg {
-    fill: var(--teal);
+  fill: var(--teal);
 }
