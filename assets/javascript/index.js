@@ -1,33 +1,35 @@
-var about = {
-  name: "Julien Shim",
-  jobTitle: "full-stack developer",
-  location: "San Francisco Bay Area",
+const about = {
+  name: 'Julien Shim',
+  jobTitle: 'full-stack developer',
+  location: 'San Francisco Bay Area',
+  interests: ['websites', 'web applications', 'UX/UI', 'mobile applications'],
   recentWork: [],
   targets: {
-    introduction: document.querySelector("#typedIntroduction"),
-    recentWork: document.querySelector("#recent-work"),
-    skills: document.querySelector("#skillsBubbleDiagram"),
+    introduction: document.querySelector('#typedIntroduction'),
+    recentWork: document.querySelector('#recent-work'),
+    skills: document.querySelector('#skillsBubbleDiagram'),
     ahref: document.querySelectorAll('a[href^="#"]')
   },
-  generateSkills: function() {
-    var disciplines = [];
+  generateSkills() {
+    const disciplines = [];
 
-    about.recentWork.forEach(function(project) {
-      project.disciplines.forEach(function(discipline) {
+    about.recentWork.forEach(project => {
+      project.disciplines.forEach(discipline => {
         if (
           !disciplines.some(disciplineObject =>
             disciplineObject.tagName.includes(discipline)
           )
         ) {
-          var newDisciplineObject = {
+          const newDisciplineObject = {
             tagName: discipline,
             count: 1
           };
           disciplines.push(newDisciplineObject);
         } else {
-          disciplines.forEach(function(disciplineObject) {
+          disciplines.forEach(disciplineObject => {
             if (disciplineObject.tagName === discipline) {
-              disciplineObject.count++;
+              // eslint-disable-next-line no-param-reassign
+              disciplineObject.count += 1;
             }
           });
         }
@@ -39,31 +41,30 @@ var about = {
             const aTag = a.tagName.toLowerCase();
             const bTag = b.tagName.toLowerCase();
             if (aTag < bTag) {
-              return -1
-            } else if (aTag > bTag) {
-              return 1
-            } else {
-              return 0
+              return -1;
             }
+            if (aTag > bTag) {
+              return 1;
+            }
+            return 0;
           })
           .map(discipline => {
-            const isTwo = discipline.tagName.split(" ").length === 2;
+            const isTwo = discipline.tagName.split(' ').length === 2;
             return `
               <dt class="filter-tags hard-skill-${
                 discipline.count >= 4 ? 5 : discipline.count + 2
-              }${isTwo ? "-alt" : ""}" data-filter="${discipline.tagName}">${
+              }${isTwo ? '-alt' : ''}" data-filter="${discipline.tagName}">${
               isTwo
-                ? discipline.tagName.split(" ").join(`<br>`)
+                ? discipline.tagName.split(' ').join(`<br>`)
                 : discipline.tagName
             }</dt>
               <dd>${discipline.count}</dd>
           `;
           })
-          .join("")}
+          .join('')}
     `;
-    clickTags();
   },
-  generateRecentWork: function() {
+  generateRecentWork() {
     this.targets.recentWork.innerHTML = `
         ${about.recentWork
           .slice(0, 3)
@@ -83,7 +84,7 @@ var about = {
                                         discipline =>
                                           `<li class="filter-tags" data-filter="${discipline}">${discipline}</li>`
                                       )
-                                      .join("")}
+                                      .join('')}
                                 </ul>
                             </div>
                             <div class="year-overlay">
@@ -98,91 +99,154 @@ var about = {
                         </div>
                     </div>
                     <p class="project-title">${works.title}</p>
-                    <p class="disciplines">${works.roles.join(", ")}</p>
+                    <p class="disciplines">${works.roles.join(', ')}</p>
                     <p class="summary mb-12">${works.summary}</p>
                 </div>
             </div>
         `
           )
-          .join("")}
+          .join('')}
     `;
-    clickTags();
   },
-  smoothScrolling: function() {
+  smoothScrolling() {
     this.targets.ahref.forEach(anchor => {
-      anchor.addEventListener("click", function(event) {
+      anchor.addEventListener('click', event => {
         event.preventDefault();
-        document.querySelector(this.getAttribute("href")).scrollIntoView({
-          behavior: "smooth"
+        document.querySelector(anchor.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
         });
       });
     });
-  },
-  init: function() {
-    this.generateRecentWork();
-    this.generateSkills();
-    this.smoothScrolling();
   }
 };
 
 // Introduction - Note: Object Literals
 
-var introduction = `<h1 class='introduction-header mb-12'>Hi, my name is <span>${about.name}</span>.</h1> <h1 class='introduction-header mb-48'>I am a user-focused <span>${about.jobTitle}</span> based in the <span>${about.location}</span>.</h1><p>I love designing and building full-stack web applications.</p>`,
-  i = 0,
-  isTag,
-  text;
+let i = 0;
+let j = 0;
+let message = `<h1 class='introduction-header mb-12'>Hi, my name is <span>${about.name}</span>.</h1><h1 class='introduction-header mb-48'>I am a user-focused <span>${about.jobTitle}</span> based in the <span>${about.location}</span>.</h1><p>I love designing and building<span id="animatedText">${about.interests[j]}.</span></p>`;
+let target = about.targets.introduction;
+let isTag;
+let isAnimated = false;
 
 function clickTags() {
-  document.querySelectorAll(".filter-tags").forEach(function(filterTag) {
-    filterTag.addEventListener("click", function(event) {
-      var filter = event.target.dataset.filter;
+  document.querySelectorAll('.filter-tags').forEach(filterTag => {
+    filterTag.addEventListener('click', event => {
+      const { filter } = event.target.dataset;
       event.preventDefault();
-      sessionStorage.setItem("filter", filter);
+      sessionStorage.setItem('filter', filter);
       // var portfolio = '/portfolio.html'
-      window.location.href = "portfolio.html";
+      window.location.href = 'portfolio.html';
     });
   });
 }
 
-function screenType() {
-  character = introduction.slice(0, i++);
-  if (character === introduction) return;
+// function screenType() {
+//   const character = introduction.slice(0, (i += 1));
+//   if (character === introduction) return;
 
-  about.targets.introduction.innerHTML =
-    character + '<span class="caret blink" aria-hidden="true"></span>';
+//   about.targets.introduction.innerHTML = `${character}<span class="caret blink" aria-hidden="true"></span>`;
 
-  var currentCharacter = character.slice(-1);
-  if (currentCharacter === "<") isTag = true;
-  if (currentCharacter === ">") isTag = false;
+//   const currentCharacter = character.slice(-1);
+//   if (currentCharacter === '<') isTag = true;
+//   if (currentCharacter === '>') isTag = false;
 
-  if (isTag) return screenType();
+//   if (isTag) {
+//     // eslint-disable-next-line consistent-return
+//     return screenType();
+//   }
 
-  if ((currentCharacter === ".") | (currentCharacter === "?")) {
+//   if (currentCharacter === '.' || currentCharacter === '?') {
+//     setTimeout(screenType, 500);
+//   } else {
+//     setTimeout(screenType, 25);
+//   }
+// }
+
+const screenType = () => {
+  // console.log(i, "i")
+
+  // console.log(isAnimated, "isAnimated");
+  const character = message.slice(0, (i += 1));
+  if (character === message) {
+    i = about.interests[j].length;
+      setTimeout(backSpace, 500);
+    return
+    // return;
+    // document.querySelector("#animated-text").innerHTML = '';
+  };
+
+  target.innerHTML = `${character}<span class="caret blink" aria-hidden="true"></span>`;
+
+  const currentCharacter = character.slice(-1);
+  if (currentCharacter === '<') isTag = true;
+  if (currentCharacter === '>') isTag = false;
+
+  if (isTag) {
+    // eslint-disable-next-line consistent-return
+    return screenType();
+  }
+  if (currentCharacter === '.' || currentCharacter === '?') {
+    // console.log("500")
     setTimeout(screenType, 500);
   } else {
+    // console.log("50")
     setTimeout(screenType, 25);
   }
 }
 
-var xhr = new XMLHttpRequest();
+const backSpace = () => {
+    const character = about.interests[j] ? about.interests[j].slice(0, (i -= 1)) : '';
+    document.querySelector('#animatedText').innerHTML = `${character}<span class="caret blink" aria-hidden="true"></span>`;
+    if (character.length === 0) { 
+
+        i = 0;
+        if (j < about.interests.length - 1) {j++} else { j= 0}
+        message = `<span>${about.interests[j]}.</span>`
+        // message = about.interests[j]
+        target = document.querySelector('#animatedText');
+        isAnimated = true;
+        console.log(about.interests.length , j);
+        setTimeout(screenType, 500)
+        console.log("done");
+      
+      return
+    }
+    if (character === about.interests[j]) {
+      setTimeout(backSpace, 50);
+    } else {
+      setTimeout(backSpace, 50);
+    }
+}
+
+const init = () => {
+  about.generateRecentWork();
+  about.generateSkills();
+  clickTags();
+  about.smoothScrolling();
+};
+
+const xhr = new XMLHttpRequest();
 xhr.open(
-  "GET",
-  "https://raw.githubusercontent.com/julienshim/Portfolio-Playground/master/data-test.json"
+  'GET',
+  'https://raw.githubusercontent.com/julienshim/Portfolio-Playground/master/data-test.json'
 );
-xhr.onload = function() {
-  if (this.status === 200) {
+xhr.onload = () => {
+  if (xhr.status === 200) {
     try {
-      const resObj = JSON.parse(this.responseText);
+      const resObj = JSON.parse(xhr.responseText);
       about.recentWork = resObj.projects;
-      console.log(about.recentWork);
-      console.log("Projects Loaded.");
+      // eslint-disable-next-line no-console
+      console.log('Projects Loaded.');
       screenType();
-      about.init();
+      init();
     } catch (error) {
-      console.warn("There was an error in the JSON. Could not parse!", error);
+      // eslint-disable-next-line no-console
+      console.warn('There was an error in the JSON. Could not parse!', error);
     }
   } else {
-    console.warn("Did not receive 200 OK for response!");
+    // eslint-disable-next-line no-console
+    console.warn('Did not receive 200 OK for response!');
   }
 };
 xhr.send();
