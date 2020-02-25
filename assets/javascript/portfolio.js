@@ -6,7 +6,6 @@ var portfolio = {
     portfolio: document.querySelector("#portfolio"),
     currentFilterSelected: document.querySelector("#currentFilterSelected"),
     filterTags: document.querySelectorAll(".filter-tags")
-    // filterSVG: document.querySelector("#filterSVG")
   },
   sessionStorage: {
     filter: sessionStorage.getItem("filter")
@@ -123,7 +122,6 @@ function generateFilterTags(textHighlight = "") {
 }
 
 function clickTags() {
-  // var filterTags = document.querySelectorAll(".filter-tags");
   document.querySelectorAll(".filter-tags").forEach(function(filterTag) {
     filterTag.addEventListener("click", function(event) {
       var filter = event.target.dataset.filter;
@@ -132,7 +130,6 @@ function clickTags() {
       if (filter === "All") {
         generateFilterTags("All");
         generateProjects(portfolio.projects);
-        // portfolio.targets.slider;
         slide();
         portfolio.targets.currentFilterSelected.innerHTML = "";
       } else {
@@ -146,7 +143,6 @@ function clickTags() {
   });
 
   if (portfolio.targets.currentFilterSelected) {
-    // if (portfolio.targets.currentFilterSelected && portfolio.targets.currentFilterSelected.innerHTML.trim() !== "") {
     portfolio.targets.currentFilterSelected.addEventListener("click", function(
       event
     ) {
@@ -165,8 +161,6 @@ function slide() {
     portfolio.targets.slider.classList.toggle("slideup");
     portfolio.targets.slider.classList.toggle("slidedown");
   }
-  // portfolio.targets.filterSVG.classList.toggle("rotate");
-  // console.log("in here");
 }
 
 function filterProjects(keyword) {
@@ -199,8 +193,6 @@ function init() {
         <span class="filter-id" id="filterId"><a href="#">${portfolio.sessionStorage.filter} <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M12 11.293l10.293-10.293.707.707-10.293 10.293 10.293 10.293-.707.707-10.293-10.293-10.293 10.293-.707-.707 10.293-10.293-10.293-10.293.707-.707 10.293 10.293z"/></svg></a></span>`;
   }
 }
-
-// init();
 
 var xhr = new XMLHttpRequest();
 xhr.open(
