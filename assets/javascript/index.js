@@ -141,39 +141,14 @@ function clickTags() {
   });
 }
 
-// function screenType() {
-//   const character = introduction.slice(0, (i += 1));
-//   if (character === introduction) return;
 
-//   about.targets.introduction.innerHTML = `${character}<span class="caret blink" aria-hidden="true"></span>`;
-
-//   const currentCharacter = character.slice(-1);
-//   if (currentCharacter === '<') isTag = true;
-//   if (currentCharacter === '>') isTag = false;
-
-//   if (isTag) {
-//     // eslint-disable-next-line consistent-return
-//     return screenType();
-//   }
-
-//   if (currentCharacter === '.' || currentCharacter === '?') {
-//     setTimeout(screenType, 500);
-//   } else {
-//     setTimeout(screenType, 25);
-//   }
-// }
 
 const screenType = () => {
-  // console.log(i, "i")
-
-  // console.log(isAnimated, "isAnimated");
   const character = message.slice(0, (i += 1));
   if (character === message) {
     i = about.interests[j].length;
       setTimeout(backSpace, 500);
     return
-    // return;
-    // document.querySelector("#animated-text").innerHTML = '';
   };
 
   target.innerHTML = `${character}<span class="caret blink" aria-hidden="true"></span>`;
@@ -187,10 +162,8 @@ const screenType = () => {
     return screenType();
   }
   if (currentCharacter === '.' || currentCharacter === '?') {
-    // console.log("500")
     setTimeout(screenType, 500);
   } else {
-    // console.log("50")
     setTimeout(screenType, 25);
   }
 }
@@ -203,7 +176,6 @@ const backSpace = () => {
         i = 0;
         if (j < about.interests.length - 1) {j++} else { j= 0}
         message = `<span>${about.interests[j]}.</span>`
-        // message = about.interests[j]
         target = document.querySelector('#animatedText');
         isAnimated = true;
         console.log(about.interests.length , j);
