@@ -43,9 +43,14 @@ a.filter-tags {
   max-height: 610px;
 }
 
-.filter-svg {
+/* .filter-svg {
   margin: 0 0 0 24px;
   fill: var(--dust);
+} */
+
+#filterSVG {
+  height: 10px;
+  width: 10px;
 }
 
 .filter-tab {
@@ -76,16 +81,16 @@ a[href].filter-tags:hover {
   text-decoration: none;
   font-size: 0.7rem;
   color: var(--teal-70);
-  -webkit-transition: all 0.8s ease;
-  -moz-transition: all 0.8s ease;
-  -ms-transition: all 0.8s ease;
-  -o-transition: all 0.8s ease;
-  transition: all 0.8s ease;
 }
 
 .filter-id a:hover {
   border: 1px solid var(--dust);
   color: var(--dust);
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .filter-id a svg {
@@ -93,13 +98,27 @@ a[href].filter-tags:hover {
   width: 10px;
   height: 10px;
   margin-left: 12px;
-  -webkit-transition: all 0.8s ease;
+  /* -webkit-transition: all 0.8s ease;
   -moz-transition: all 0.8s ease;
   -ms-transition: all 0.8s ease;
   -o-transition: all 0.8s ease;
-  transition: all 0.8s ease;
+  transition: all 0.8s ease; */
 }
 
 .filter-id a:hover svg {
   fill: var(--dust);
 }
+
+.rotate {
+  transform: rotate(180deg);
+  transform-origin: center;
+  -webkit-transition: transform 0.3s ease;
+  -moz-transition: transform 0.3s ease;
+  -ms-transition: transform 0.3s ease;
+  -o-transition: transform 0.3s ease;
+  transition: transform 0.3s ease;
+}
+
+/* .rotate-rev {
+  transform: rotate(-180deg);
+} */
