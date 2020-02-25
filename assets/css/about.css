@@ -149,3 +149,17 @@ a[href].see-all:hover {
 .profile-picture {
   width: 100%;
 }
+
+#animatedText {
+  margin-left: 5px;
+}
+
+/* @media (max-width: 530px) {
+  #animatedText,
+  #aboutName,
+  #aboutJob,
+  #aboutLocation {
+    display: block;
+    margin-left: 0px;
+  }
+} */
