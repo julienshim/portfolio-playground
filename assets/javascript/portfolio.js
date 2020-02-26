@@ -197,7 +197,7 @@ function init() {
 var xhr = new XMLHttpRequest();
 xhr.open(
   "GET",
-  "https://raw.githubusercontent.com/julienshim/Portfolio-Playground/master/data-test.json"
+  "https://raw.githubusercontent.com/julienshim/Portfolio-Playground/master/data.json"
 );
 xhr.onload = function() {
   if (this.status === 200) {

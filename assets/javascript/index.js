@@ -203,7 +203,7 @@ const init = () => {
 const xhr = new XMLHttpRequest();
 xhr.open(
   'GET',
-  'https://raw.githubusercontent.com/julienshim/Portfolio-Playground/master/data-test.json'
+  'https://raw.githubusercontent.com/julienshim/Portfolio-Playground/master/data.json'
 );
 xhr.onload = () => {
   if (xhr.status === 200) {
