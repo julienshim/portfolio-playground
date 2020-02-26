@@ -13,7 +13,7 @@ div.typed-introduction {
   width: 100;
 }
 
-div.typed-introduction h1 span {
+div.typed-introduction h1 span.about-me-key span {
   color: var(--teal);
 }
 
@@ -154,12 +154,10 @@ a[href].see-all:hover {
   margin-left: 5px;
 }
 
-/* @media (max-width: 530px) {
-  #animatedText,
-  #aboutName,
-  #aboutJob,
-  #aboutLocation {
+@media (max-width: 530px) {
+  .about-me-key,
+  #animatedText {
     display: block;
     margin-left: 0px;
   }
-} */
+}
