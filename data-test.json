@@ -2,7 +2,7 @@
   "projects": [
     {
       "title": "Reference Stripper",
-      "summary": "I'm not good at everything, I just do my best at everything. Sometimes you've gotta hide the medicine in the food.",
+      "summary": "Wikipedia text reference stripping and text manipulation tool, featuring snippets.",
       "image": "assets/images/projects/reference-stripper.png",
       "disciplines": ["ReactJS", "SCSS"],
       "githubRepo": "https://github.com/julienshim/Reference-Stripper",
@@ -12,7 +12,7 @@
     },
     {
       "title": "Pomodoro Clock",
-      "summary": "I'm not good at everything, I just do my best at everything. Sometimes you've gotta hide the medicine in the food.",
+      "summary": "Pomodoro Clock web application, featuring start, stop, reset, 1-60 minute break or session time.",
       "image": "assets/images/projects/pomodoro-clock.png",
       "disciplines": ["ReactJS", "SCSS"],
       "githubRepo": "https://github.com/julienshim",
@@ -22,7 +22,7 @@
     },
     {
       "title": "JavaScript Calculator",
-      "summary": "I'm not good at everything, I just do my best at everything. Sometimes you've gotta hide the medicine in the food.",
+      "summary": "Javascript calculator application for web.",
       "image": "assets/images/projects/javascript-calculator.png",
       "disciplines": ["ReactJS", "SCSS"],
       "githubRepo": "https://github.com/julienshim",
@@ -32,7 +32,7 @@
     },
     {
       "title": "Drum Machine",
-      "summary": "I'm not good at everything, I just do my best at everything. Sometimes you've gotta hide the medicine in the food.",
+      "summary": "Drum Machine featuring kicks, close hats, hi hats, crashes, snares, toms, and horns",
       "image": "assets/images/projects/drum-machine.png",
       "disciplines": ["ReactJS", "SCSS"],
       "githubRepo": "https://github.com/julienshim",
@@ -42,7 +42,7 @@
     },
     {
       "title": "Markdown Preview",
-      "summary": "I'm not good at everything, I just do my best at everything. Sometimes you've gotta hide the medicine in the food.",
+      "summary": "A markdown editor with real-time preview.",
       "image": "assets/images/projects/markdown-preview.png",
       "disciplines": ["ReactJS", "SCSS"],
       "githubRepo": "https://github.com/julienshim",
@@ -62,7 +62,7 @@
     },
     {
       "title": "Random Quote Machine",
-      "summary": "I'm not good at everything, I just do my best at everything. Sometimes you've gotta hide the medicine in the food.",
+      "summary": "A random quote machine in both English and Korean, featuring share via Twitter.",
       "image": "assets/images/projects/random-quote-machine.png",
       "disciplines": ["ReactJS", "SCSS"],
       "githubRepo": "https://github.com/julienshim",
@@ -72,7 +72,7 @@
     },
     {
       "title": "Technical Document Page",
-      "summary": "I'm not good at everything, I just do my best at everything. Sometimes you've gotta hide the medicine in the food.",
+      "summary": "Embedded Javascript Documentation reimagined.",
       "image": "assets/images/projects/technical-document-page.png",
       "disciplines": ["HTML", "CSS", "JavaScript"],
       "githubRepo": "https://github.com/julienshim",
@@ -82,7 +82,7 @@
     },
     {
       "title": "Product Landing Page",
-      "summary": "I'm not good at everything, I just do my best at everything. Sometimes you've gotta hide the medicine in the food.",
+      "summary": "Project Landing Page for the failed Yashica Y35 digiFilm™ cameras reimagined.",
       "image": "assets/images/projects/product-landing-page.png",
       "disciplines": ["HTML", "CSS", "JavaScript"],
       "githubRepo": "https://github.com/julienshim",
@@ -92,7 +92,7 @@
     },
     {
       "title": "Survey Form",
-      "summary": "I'm not good at everything, I just do my best at everything. Sometimes you've gotta hide the medicine in the food.",
+      "summary": "Reinterpreting the Apple Market Research Survey Feedback form for the fictional Mapple MyPhone.",
       "image": "assets/images/projects/survey-form.png",
       "disciplines": ["HTML", "CSS"],
       "githubRepo": "https://github.com/julienshim",
@@ -102,7 +102,7 @@
     },
     {
       "title": "Tribute Page",
-      "summary": "I'm not good at everything, I just do my best at everything. Sometimes you've gotta hide the medicine in the food.",
+      "summary": "As an avid full-frame digital, 35mm film photographer, a tribute page for Oskar Barnack, the father of 35mm photograph.",
       "image": "assets/images/projects/tribute-page.png",
       "disciplines": ["HTML", "CSS"],
       "githubRepo": "https://github.com/julienshim",
