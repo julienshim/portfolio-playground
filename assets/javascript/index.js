@@ -8,7 +8,8 @@ const about = {
     introduction: document.querySelector('#typedIntroduction'),
     recentWork: document.querySelector('#recent-work'),
     skills: document.querySelector('#skillsBubbleDiagram'),
-    ahref: document.querySelectorAll('a[href^="#"]')
+    ahref: document.querySelectorAll('a[href^="#"]'),
+    seeAll: document.querySelector('a.see-all')
   },
   generateSkills() {
     const disciplines = [];
@@ -124,7 +125,7 @@ const about = {
 
 let i = 0;
 let j = 0;
-let message = `<h1 class='introduction-header mb-12'>Hi, my name is <span>${about.name}</span>.</h1><h1 class='introduction-header mb-48'>I am a user-focused <span>${about.jobTitle}</span> based in the <span>${about.location}</span>.</h1><p>I love designing and building<span id="animatedText">${about.interests[j]}.</span></p>`;
+let message = `<h1 class='introduction-header mb-12'>Hi, my name is <span class="about-me-key"><span>${about.name}</span>.</span></h1><h1 class='introduction-header mb-48'>I am a user-focused <span class="about-me-key"><span>${about.jobTitle}</span></span> based in the <span class="about-me-key"><span>${about.location}</span>.</span></h1><p>I love designing and building<span id="animatedText">${about.interests[j]}.</span></p>`;
 let target = about.targets.introduction;
 let isTag;
 let isAnimated = false;
@@ -196,6 +197,7 @@ const init = () => {
   about.generateSkills();
   clickTags();
   about.smoothScrolling();
+  about.targets.seeAll.innerHTML = `See All ${about.recentWork.length} Projects`;
 };
 
 const xhr = new XMLHttpRequest();
