@@ -1,11 +1,5 @@
 @import url("./filter.css");
 
-/* .portfolio {
-    max-width: 1200px;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-} */
-
 div.project-container {
   display: block;
   width: 100%;
@@ -75,7 +69,6 @@ div.project-container {
   bottom: 9%;
   right: 6%;
   color: var(--liquid-white);
-  /* margin: 0 12px 12px 0; */
 }
 
 .external-links-overlay p a {
@@ -103,7 +96,6 @@ div.project-container {
   position: absolute;
   bottom: 7%;
   left: 6%;
-  /* margin: 0 0 12px 12px; */
   padding: 0 6px;
   border-bottom: 1px solid var(--dust);
   color: var(--dust);

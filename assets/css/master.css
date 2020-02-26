@@ -32,10 +32,6 @@ body {
   user-select: none;
 }
 
-/* body.hidden {  <---- why was this put in place 11/09
-  overflow: hidden;
-} */
-
 /* Fonts */
 
 .main-wrapper {
