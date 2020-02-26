@@ -1,15 +1,15 @@
 const about = {
-  name: 'Julien Shim',
-  jobTitle: 'full-stack developer',
-  location: 'San Francisco Bay Area',
-  interests: ['websites', 'web applications', 'UX/UI', 'mobile applications'],
+  name: "Julien Shim",
+  jobTitle: "full-stack developer",
+  location: "San Francisco Bay Area",
+  interests: ["websites", "web applications", "UX/UI", "mobile applications"],
   recentWork: [],
   targets: {
-    introduction: document.querySelector('#typedIntroduction'),
-    recentWork: document.querySelector('#recent-work'),
-    skills: document.querySelector('#skillsBubbleDiagram'),
+    introduction: document.querySelector("#typedIntroduction"),
+    recentWork: document.querySelector("#recent-work"),
+    skills: document.querySelector("#skillsBubbleDiagram"),
     ahref: document.querySelectorAll('a[href^="#"]'),
-    seeAll: document.querySelector('a.see-all')
+    seeAll: document.querySelector("a.see-all")
   },
   generateSkills() {
     const disciplines = [];
@@ -50,19 +50,19 @@ const about = {
             return 0;
           })
           .map(discipline => {
-            const isTwo = discipline.tagName.split(' ').length === 2;
+            const isTwo = discipline.tagName.split(" ").length === 2;
             return `
               <dt class="filter-tags hard-skill-${
                 discipline.count >= 4 ? 5 : discipline.count + 2
-              }${isTwo ? '-alt' : ''}" data-filter="${discipline.tagName}">${
+              }${isTwo ? "-alt" : ""}" data-filter="${discipline.tagName}">${
               isTwo
-                ? discipline.tagName.split(' ').join(`<br>`)
+                ? discipline.tagName.split(" ").join(`<br>`)
                 : discipline.tagName
             }</dt>
               <dd>${discipline.count}</dd>
           `;
           })
-          .join('')}
+          .join("")}
     `;
   },
   generateRecentWork() {
@@ -85,7 +85,7 @@ const about = {
                                         discipline =>
                                           `<li class="filter-tags" data-filter="${discipline}">${discipline}</li>`
                                       )
-                                      .join('')}
+                                      .join("")}
                                 </ul>
                             </div>
                             <div class="year-overlay">
@@ -100,21 +100,21 @@ const about = {
                         </div>
                     </div>
                     <p class="project-title">${works.title}</p>
-                    <p class="disciplines">${works.roles.join(', ')}</p>
+                    <p class="disciplines">${works.roles.join(", ")}</p>
                     <p class="summary mb-12">${works.summary}</p>
                 </div>
             </div>
         `
           )
-          .join('')}
+          .join("")}
     `;
   },
   smoothScrolling() {
     this.targets.ahref.forEach(anchor => {
-      anchor.addEventListener('click', event => {
+      anchor.addEventListener("click", event => {
         event.preventDefault();
-        document.querySelector(anchor.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
+        document.querySelector(anchor.getAttribute("href")).scrollIntoView({
+          behavior: "smooth"
         });
       });
     });
@@ -131,66 +131,69 @@ let isTag;
 let isAnimated = false;
 
 function clickTags() {
-  document.querySelectorAll('.filter-tags').forEach(filterTag => {
-    filterTag.addEventListener('click', event => {
+  document.querySelectorAll(".filter-tags").forEach(filterTag => {
+    filterTag.addEventListener("click", event => {
       const { filter } = event.target.dataset;
       event.preventDefault();
-      sessionStorage.setItem('filter', filter);
+      sessionStorage.setItem("filter", filter);
       // var portfolio = '/portfolio.html'
-      window.location.href = 'portfolio.html';
+      window.location.href = "portfolio.html";
     });
   });
 }
-
-
 
 const screenType = () => {
   const character = message.slice(0, (i += 1));
   if (character === message) {
     i = about.interests[j].length;
-      setTimeout(backSpace, 500);
-    return
-  };
+    setTimeout(backSpace, 500);
+    return;
+  }
 
   target.innerHTML = `${character}<span class="caret blink" aria-hidden="true"></span>`;
 
   const currentCharacter = character.slice(-1);
-  if (currentCharacter === '<') isTag = true;
-  if (currentCharacter === '>') isTag = false;
+  if (currentCharacter === "<") isTag = true;
+  if (currentCharacter === ">") isTag = false;
 
   if (isTag) {
     // eslint-disable-next-line consistent-return
     return screenType();
   }
-  if (currentCharacter === '.' || currentCharacter === '?') {
+  if (currentCharacter === "." || currentCharacter === "?") {
     setTimeout(screenType, 500);
   } else {
     setTimeout(screenType, 25);
   }
-}
+};
 
 const backSpace = () => {
-    const character = about.interests[j] ? about.interests[j].slice(0, (i -= 1)) : '';
-    document.querySelector('#animatedText').innerHTML = `${character}<span class="caret blink" aria-hidden="true"></span>`;
-    if (character.length === 0) { 
-
-        i = 0;
-        if (j < about.interests.length - 1) {j++} else { j= 0}
-        message = `<span>${about.interests[j]}.</span>`
-        target = document.querySelector('#animatedText');
-        isAnimated = true;
-        console.log(about.interests.length , j);
-        setTimeout(screenType, 500)
-        console.log("done");
-      
-      return
-    }
-    if (character === about.interests[j]) {
-      setTimeout(backSpace, 50);
+  const character = about.interests[j]
+    ? about.interests[j].slice(0, (i -= 1))
+    : "";
+  document.querySelector(
+    "#animatedText"
+  ).innerHTML = `${character}<span class="caret blink" aria-hidden="true"></span>`;
+  if (character.length === 0) {
+    i = 0;
+    if (j < about.interests.length - 1) {
+      j++;
     } else {
-      setTimeout(backSpace, 50);
+      j = 0;
     }
-}
+    message = `<span>${about.interests[j]}.</span>`;
+    target = document.querySelector("#animatedText");
+    isAnimated = true;
+    setTimeout(screenType, 500);
+
+    return;
+  }
+  if (character === about.interests[j]) {
+    setTimeout(backSpace, 50);
+  } else {
+    setTimeout(backSpace, 50);
+  }
+};
 
 const init = () => {
   about.generateRecentWork();
@@ -201,26 +204,23 @@ const init = () => {
 };
 
 const xhr = new XMLHttpRequest();
-xhr.open(
-  'GET',
-  'https://raw.githubusercontent.com/julienshim/Portfolio-Playground/master/data.json'
-);
+xhr.open("GET", "/data.json");
 xhr.onload = () => {
   if (xhr.status === 200) {
     try {
       const resObj = JSON.parse(xhr.responseText);
       about.recentWork = resObj.projects;
       // eslint-disable-next-line no-console
-      console.log('Projects Loaded.');
+      console.log("Projects Loaded.");
       screenType();
       init();
     } catch (error) {
       // eslint-disable-next-line no-console
-      console.warn('There was an error in the JSON. Could not parse!', error);
+      console.warn("There was an error in the JSON. Could not parse!", error);
     }
   } else {
     // eslint-disable-next-line no-console
-    console.warn('Did not receive 200 OK for response!');
+    console.warn("Did not receive 200 OK for response!");
   }
 };
 xhr.send();
