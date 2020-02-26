@@ -1,1 +1,0 @@
-document.querySelector(".see-all").innerText = `See All ${about.recentWork.length} Projects`;
