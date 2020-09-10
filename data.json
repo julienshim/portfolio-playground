@@ -1,6 +1,16 @@
 {
   "projects": [
     {
+      "title": "Reference Stripper",
+      "summary": "Wikipedia text reference stripping and text manipulation tool, featuring snippets, presets, and other features",
+      "image": "assets/images/projects/reference-stripper.png",
+      "disciplines": ["ReactJS", "SCSS"],
+      "githubRepo": "https://github.com/julienshim/reference-stripper",
+      "deployedURL": "https://codepen.io/julienshim/full/ZEzomZx",
+      "roles": ["Author"],
+      "year": 2019
+    },
+    {
       "title": "Pomodoro Clock",
       "summary": "Pomodoro Clock web application, featuring start, stop, reset, 1-60 minute break or session time.",
       "image": "assets/images/projects/pomodoro-clock.png",
