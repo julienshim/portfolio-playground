@@ -4,7 +4,7 @@
       "title": "Memrise Course to CSV",
       "summary": "Memrise Course to CSV is a Google Chrome web browser extension that converts a Memrise courses into a CSV file.",
       "image": "assets/images/projects/memrise-course-to-csv.png",
-      "disciplines": ["Javascript", "CSS", "Browser Extension"],
+      "disciplines": ["JavaScript", "CSS", "Browser Extension"],
       "githubRepo": "https://github.com/julienshim/memrise-course-to-csv",
       "deployedURL": "",
       "roles": ["Author"],
@@ -18,7 +18,7 @@
       "githubRepo": "https://github.com/julienshim/reference-stripper",
       "deployedURL": "https://codepen.io/julienshim/full/ZEzomZx",
       "roles": ["Author"],
-      "year": 2019
+      "year": "2019-2020"
     },
     {
       "title": "Pomodoro Clock",
