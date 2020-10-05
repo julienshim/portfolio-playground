@@ -1,5 +1,6 @@
 # assets backup
 assets/social-icons/
+assets/images/projects-resized
 
 # test files
 play/
@@ -7,3 +8,4 @@ play/
 # old
 
 old/
+
