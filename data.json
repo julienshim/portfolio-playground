@@ -12,7 +12,7 @@
     },
     {
       "title": "Reference Stripper",
-      "summary": "Wikipedia text reference stripping and text manipulation tool, featuring snippets, presets, and other features",
+      "summary": "Wikipedia text reference stripping and text manipulation tool, featuring snippets, presets, and other features.",
       "image": "assets/images/projects/reference-stripper.png",
       "disciplines": ["ReactJS", "SCSS"],
       "githubRepo": "https://github.com/julienshim/reference-stripper",
@@ -42,7 +42,7 @@
     },
     {
       "title": "Drum Machine",
-      "summary": "Drum Machine featuring kicks, close hats, hi hats, crashes, snares, toms, and horns",
+      "summary": "Drum Machine featuring kicks, close hats, hi hats, crashes, snares, toms, and horns.",
       "image": "assets/images/projects/drum-machine.png",
       "disciplines": ["ReactJS", "SCSS"],
       "githubRepo": "https://github.com/julienshim/drum-machine",
@@ -205,7 +205,7 @@
     },
     {
       "title": "Flinders Street Station Train Schedule",
-      "summary": "Flinders Street Station Train Schedule incorporates Firebase to host up arrival data, which is manipulated with Moment.js",
+      "summary": "Flinders Street Station Train Schedule incorporates Firebase to host up arrival data, which is manipulated with Moment.js.",
       "image": "assets/images/projects/train-scheduler.png",
       "disciplines": [
         "Moment.js",
@@ -222,7 +222,7 @@
     },
     {
       "title": "5th Grade Trivia",
-      "summary": "5th Grade Trivia is a 10 question, timed trivia game using JavaScript for the logic and jQuery to manipulate HTML",
+      "summary": "5th Grade Trivia is a 10 question, timed trivia game using JavaScript for the logic and jQuery to manipulate HTML.",
       "image": "assets/images/projects/trivia-game.png",
       "disciplines": ["JavaScript", "jQuery", "CSS", "HTML"],
       "githubRepo": "https://github.com/julienshim/trivia-game",
