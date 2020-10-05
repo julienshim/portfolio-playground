@@ -1,6 +1,16 @@
 {
   "projects": [
     {
+      "title": "Memrise Course to CSV",
+      "summary": "Memrise Course to CSV is a Google Chrome web browser extension that converts a Memrise courses into a CSV file.",
+      "image": "assets/images/projects/memrise-course-to-csv.png",
+      "disciplines": ["Javascript", "CSS", "Browser Extension"],
+      "githubRepo": "https://github.com/julienshim/memrise-course-to-csv",
+      "deployedURL": "",
+      "roles": ["Author"],
+      "year": 2020
+    },
+    {
       "title": "Reference Stripper",
       "summary": "Wikipedia text reference stripping and text manipulation tool, featuring snippets, presets, and other features",
       "image": "assets/images/projects/reference-stripper.png",
