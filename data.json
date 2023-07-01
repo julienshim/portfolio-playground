@@ -1,6 +1,16 @@
 {
   "projects": [
     {
+      "title": "Korean Vocabulary Database Seed",
+      "summary": "Programatically combining the National Institute of the Korean Language and TOPIK vocabulary list for future database seeding.",
+      "image": "assets/images/projects/combined_korean_vocabulary_list.png",
+      "disciplines": ["Python 3"],
+      "githubRepo": "https://github.com/julienshim/combined_korean_vocabulary_list",
+      "deployedURL": "",
+      "roles": ["Author"],
+      "year": "2021"
+    },
+    {
       "title": "Highlight",
       "summary": "Highlight allows users to create notes faster by avoiding repetitive typing of same information.",
       "image": "assets/images/projects/highlight.png",
