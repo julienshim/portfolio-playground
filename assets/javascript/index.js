@@ -204,7 +204,7 @@ const init = () => {
 };
 
 const xhr = new XMLHttpRequest();
-xhr.open("GET", "https://raw.githubusercontent.com/julienshim/portfolio-playground/master/data.json");
+xhr.open("GET", '/data.json');
 xhr.onload = () => {
   if (xhr.status === 200) {
     try {
